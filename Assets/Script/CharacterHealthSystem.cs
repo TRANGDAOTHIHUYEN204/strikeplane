@@ -2,9 +2,24 @@ using UnityEngine;
 
 public class CharacterHealthSystem
 {
-    private CharacterData _characterData;
     private int _currentHp;
     private bool _isDead;
+    private int _maxHp;
+
+    public int CurrentHp
+    {
+        get { return _currentHp; }
+        private set { _currentHp = value; }
+    }
+
+    public bool IsDead => _isDead;
+    public int MaxHp => _maxHp;
+
+    public CharacterHealthSystem(int maxHp)
+    {
+        _maxHp = maxHp;
+        _currentHp = maxHp;
+    }
 
     public void TakeDamage(int damage)
     {
@@ -22,10 +37,10 @@ public class CharacterHealthSystem
         if (amount <= 0 ) return;
         if (_isDead ) return;
         _currentHp += amount;
-        if ( _currentHp >= _characterData.MaxHp)
+        if ( _currentHp >= MaxHp)
         {
-            _currentHp = _characterData.MaxHp;
+            _currentHp = MaxHp;
         }
     }
    
-    }
+}

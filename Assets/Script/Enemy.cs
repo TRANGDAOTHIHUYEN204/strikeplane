@@ -1,16 +1,15 @@
+
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private CharacterHealthSystem _characterHealthSystem;
 
-    // Update is called once per frame
-    void Update()
+    public void Initiated(CharacterData _characterData)
     {
-        
+        _characterHealthSystem = new EnemyHealthSystem(_characterData.MaxHp);
     }
+    public void TakeDamage(int damage) => _characterHealthSystem.TakeDamage(damage);
+    public void Heal(int amount) => _characterHealthSystem.Heal(amount);
+
 }

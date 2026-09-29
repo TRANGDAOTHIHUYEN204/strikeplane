@@ -5,6 +5,7 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] private float _speedMove = 2f;
     private Rigidbody2D _rigidbody2D;
     private Vector2 movement;
+    //private ScreenBoudaries _screenBoudaries;
 
     private void Awake()
     {
@@ -30,6 +31,9 @@ public class PlayerMovement2D : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _rigidbody2D.MovePosition(_rigidbody2D.position + movement*_speedMove * Time.fixedDeltaTime);
+        Vector2 newPos = _rigidbody2D.position + movement * _speedMove * Time.fixedDeltaTime;
+        newPos.x = Mathf.Clamp(newPos.x, ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
+        newPos.y = Mathf.Clamp(newPos.y, ScreenBoudaries.MinY, ScreenBoudaries.MaxY)    ;
+        _rigidbody2D.MovePosition(newPos);
     }
 }
