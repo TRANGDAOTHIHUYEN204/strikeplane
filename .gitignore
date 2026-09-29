@@ -1,0 +1,19 @@
+
+Library/
+Temp/
+Build/
+
+*.csproj
+*.sln
+*.slnx
+*.user
+
+
+UserSettings/EditorUserSettings.asset
+
+
+!Assets/ImportantFile.csproj
+.vs/
+
+# Unity Editor user settings
+UserSettings/
