@@ -1,12 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class FactoryEnemy : FactoryEntity
+public class FactoryEnemy : IFactoryEntity<Enemy>
 {
-    [SerializeField] private GameObject _enemyPrefab;
-
-    public override GameObject CreateEntity(Vector2 posSpawn)
+    private Stack<Enemy> _enemyPool = new Stack<Enemy>();
+    public Enemy CreateEntity(Enemy enemyPrefab, Vector2 posSpawn)
     {
-        return Instantiate(_enemyPrefab, posSpawn, Quaternion.identity);
+        Enemy enemy;
+        if (_enemyPool.Count > 0)
+        {
+            enemy = _enemyPool.Pop();
+            enemy.transform.SetLocalPositionAndRotation(posSpawn, Quaternion.identity);
+        }
+        else
+        {
+            enemy = Enemy.Instantiate(enemyPrefab, posSpawn, Quaternion.identity);
+            enemy.SetPool(this);
+        }
+        return enemy;
     }
-
+    public void Release(Enemy enemy)
+    {
+        enemy.gameObject.SetActive(false);
+        _enemyPool.Push(enemy);
+    }
 }

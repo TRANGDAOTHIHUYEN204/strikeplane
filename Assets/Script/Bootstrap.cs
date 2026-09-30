@@ -17,6 +17,6 @@ public class Bootstrap : MonoBehaviour
     public void Start() 
     {
         _player.Initialized(_characterData);
-        Debug.Log($"MaxHp: {_characterData.MaxHp}");
+        Debug.Log($"Player Hp: {_player.CurrentHp}");
     }
 }

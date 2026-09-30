@@ -34,7 +34,6 @@ public class PlayerMovement2D : MonoBehaviour
         Vector2 newPos = _rigidbody2D.position + movement * _speedMove * Time.fixedDeltaTime;
         newPos.x = Mathf.Clamp(newPos.x, ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
         newPos.y = Mathf.Clamp(newPos.y, ScreenBoudaries.MinY, ScreenBoudaries.MaxY)    ;
-        Debug.Log($"move={movement} X:{ScreenBoudaries.MinX}~{ScreenBoudaries.MaxX} Y:{ScreenBoudaries.MinY}~{ScreenBoudaries.MaxY}");
         _rigidbody2D.MovePosition(newPos);
     }
 }

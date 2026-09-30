@@ -1,7 +1,7 @@
-using Unity.VisualScripting;
+
 using UnityEngine;
 
-public abstract class FactoryEntity : MonoBehaviour
+public interface IFactoryEntity<T> where T : Component
 {
-    public abstract GameObject CreateEntity(Vector2 posSpawn); 
+    public T CreateEntity(T prefabObject, Vector2 posSpawn ) ; 
 }

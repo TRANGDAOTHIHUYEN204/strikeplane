@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CharacterHealthSystem
@@ -5,6 +6,7 @@ public class CharacterHealthSystem
     private int _currentHp;
     private bool _isDead;
     private int _maxHp;
+    public Action DieAction;
 
     public int CurrentHp
     {
@@ -29,7 +31,7 @@ public class CharacterHealthSystem
         if ( _currentHp <= 0)
         {
             _currentHp = 0;
-            _isDead = true;
+            Die();
         }
     }
     public void Heal(int amount)
@@ -42,5 +44,9 @@ public class CharacterHealthSystem
             _currentHp = MaxHp;
         }
     }
-   
+    public virtual void Die()
+    {
+        _isDead = true;
+        DieAction?.Invoke();
+    }
 }
