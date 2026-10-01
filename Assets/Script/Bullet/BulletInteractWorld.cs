@@ -1,8 +1,11 @@
-using System.Linq.Expressions;
 using UnityEngine;
 
 public class BulletInteractWorld
 {
+    public static float DistanceTarget(Vector2 startPos, Vector2 targetPos )
+    {
+        return (startPos - targetPos).sqrMagnitude;
+    }
     public Damageable FindNearest(Vector2 posObject, float range, LayerMask layerTarget)
     {
 
@@ -12,7 +15,7 @@ public class BulletInteractWorld
         {
             if (!target.TryGetComponent(out Damageable targetDamage))
                 continue;
-            float distance = (targetDamage.Position - posObject).sqrMagnitude;
+            float distance = DistanceTarget(targetDamage.Position, posObject);
             if (distance < min)
             {
                 min = distance;
