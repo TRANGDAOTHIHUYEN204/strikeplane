@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Damageable
 {
     private CharacterHealthSystem _characterHealthSystem;
     private EnemyData _enemyData;
@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     public int CurrentHp => _characterHealthSystem.CurrentHp;
     public bool IsDead => _characterHealthSystem.IsDead;
     public int AttackSpeed => _enemyData.AttackSpeed;
-
 
     public void Initiated(EnemyData _characterData)
     {
@@ -27,7 +26,7 @@ public class Enemy : MonoBehaviour
         }
         return true;
     }
-    public void TakeDamage(int damage)
+    public override void TakeDamage(int damage)
     {
         if (!isReady()) return;
         _characterHealthSystem?.TakeDamage(damage);

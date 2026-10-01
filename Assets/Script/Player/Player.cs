@@ -1,15 +1,16 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Damageable
 {
     private CharacterHealthSystem _characterHealthSystem;
     public int CurrentHp => _characterHealthSystem.CurrentHp;
     public bool IsDead => _characterHealthSystem.IsDead;
+
     public void Initialized(CharacterData _characterData)
     {
         _characterHealthSystem = new PlayerHealthSystem(_characterData.MaxHp);
         
     }
-    public void TakeDamage(int damage) => _characterHealthSystem.TakeDamage(damage);
+    public override void TakeDamage(int damage) => _characterHealthSystem.TakeDamage(damage);
     public void Heal(int amount) => _characterHealthSystem.Heal(amount);
 }

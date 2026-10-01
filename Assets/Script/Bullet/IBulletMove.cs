@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletBase
+public class IBulletMove
 {
     
 }
