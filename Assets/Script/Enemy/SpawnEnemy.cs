@@ -1,13 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    private IFactoryEntity<Enemy> _factoryEntity;
+    private FactoryEnemy _factoryEnemy;
+    public IReadOnlyList<Enemy> _enemyActive => _factoryEnemy.EnemyActive;
     private const float _spawnOffet = 2f;
     
     private void Awake()
     {
-        _factoryEntity = new FactoryEnemy();
+        _factoryEnemy = new FactoryEnemy();
     }
 
     public Enemy SpawnEnemyWave(Enemy enemyPrefab, EnemyData enemyData)
@@ -16,10 +18,12 @@ public class SpawnEnemy : MonoBehaviour
         {
             return null;
         }
-        Enemy currentEnemy = _factoryEntity.CreateEntity(enemyPrefab, PositionSpawnEnemy());
+        Enemy currentEnemy = _factoryEnemy.CreateEntity(enemyPrefab, PositionSpawnEnemy());
         currentEnemy.Initiated(enemyData);
+        _factoryEnemy.Active(currentEnemy);
         return currentEnemy;
      }
+
     private Vector2 PositionSpawnEnemy()
     {
         float x = Random.Range(ScreenBoudaries.MinX, ScreenBoudaries.MaxX);

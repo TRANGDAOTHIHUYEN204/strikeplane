@@ -23,8 +23,13 @@ public class FactoryEnemy : IFactoryEntity<Enemy>
         }
         return enemy;
     }
+    public void Active(Enemy enemy)
+    {
+        _enemyActive.Add(enemy);
+    }
     public void Release(Enemy enemy)
     {
+        if (!_enemyActive.Remove(enemy)) return;
         enemy.gameObject.SetActive(false);
         _enemyPool.Push(enemy);
     }
