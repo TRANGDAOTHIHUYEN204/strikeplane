@@ -15,4 +15,5 @@ MonoBehaviour:
   _name: 
   _maxHp: 100
   _armor: 5
-  _attackSpeed: 1
+  _attackSpeed: 5
+  _speedMove: 0

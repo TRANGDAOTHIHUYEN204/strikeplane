@@ -5,7 +5,7 @@ public class NormalBulletBehaviour : BulletBehaviour
     
     public override bool OnHit(BulletInformation bulletInfor)
     {
-        bulletInfor.currentTarget.TakeDamage(bulletInfor.bullet.Damage);
+        bulletInfor.currentTarget.TakeDamage(bulletInfor.damage);
         return true;
     }
 }

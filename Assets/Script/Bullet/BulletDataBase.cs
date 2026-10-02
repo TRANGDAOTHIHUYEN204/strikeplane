@@ -15,6 +15,7 @@ public class BulletDataBase : ScriptableObject
     [SerializeField] private BulletType _bulletType;
     [SerializeField] private LayerMask layerTarget;
     [SerializeField] private float _lifeTime;
+    [SerializeField] private float _speedMove;
     public int Damage
     {
         get {  return _damage; }
@@ -31,4 +32,5 @@ public class BulletDataBase : ScriptableObject
         private set { layerTarget = value; }
     }
     public float LifeTime => _lifeTime;
+    public float SpeedMove => _speedMove;
 }

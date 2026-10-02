@@ -24,7 +24,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         float x = Random.Range(ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
         float y = ScreenBoudaries.MaxY + _spawnOffet;
-        return new Vector2(x, y);
+        return new Vector2(x, y); 
     }
 
 }

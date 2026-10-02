@@ -18,3 +18,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   _lifeTime: 5
+  _speedMove: 2

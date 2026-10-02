@@ -8,13 +8,15 @@ public class BulletInteractWorld
     }
     public Damageable FindNearest(Vector2 posObject, float range, LayerMask layerTarget)
     {
-
+        Collider2D[] hits = Physics2D.OverlapCircleAll(posObject, range, layerTarget);
         Damageable nearestObject = null;
         float min = float.MaxValue;
-        foreach (var target in Physics2D.OverlapCircleAll(posObject, range, layerTarget))
+        foreach (Collider2D target in hits)
         {
             if (!target.TryGetComponent(out Damageable targetDamage))
+            {
                 continue;
+            }
             float distance = DistanceTarget(targetDamage.Position, posObject);
             if (distance < min)
             {
@@ -26,7 +28,8 @@ public class BulletInteractWorld
     }
     public void AttackArea(Vector2 posObject, float radius, int damage, LayerMask layerTarget)
     {
-        foreach (var target in Physics2D.OverlapCircleAll(posObject, radius, layerTarget))
+        Collider2D[] hits = Physics2D.OverlapCircleAll(posObject, radius, layerTarget);
+        foreach (Collider2D target in hits)
         {
             if (!target.TryGetComponent(out Damageable targetDamage))
                 targetDamage.TakeDamage(damage);

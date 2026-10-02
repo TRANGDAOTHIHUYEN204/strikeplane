@@ -1,6 +1,4 @@
-using Unity.Multiplayer.PlayMode;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class HomingBulletBehaviour : BulletBehaviour
 {
@@ -28,7 +26,7 @@ public class HomingBulletBehaviour : BulletBehaviour
     }
     public override bool OnHit(BulletInformation bulletInfor)
     {
-        bulletInfor.currentTarget.TakeDamage(bulletInfor.bullet.Damage);
+        bulletInfor.currentTarget.TakeDamage(bulletInfor.damage);
         return true;
     }
 }

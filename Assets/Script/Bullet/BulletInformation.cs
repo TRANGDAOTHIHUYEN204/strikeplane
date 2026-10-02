@@ -8,6 +8,7 @@ public class BulletInformation
     public Vector2 direction;
     public Damageable currentTarget;
     public BulletInteractWorld bulletAttackWorld;
-
+    public LayerMask layerTarget;
     public float deltaTime;
+    public int damage;
 }

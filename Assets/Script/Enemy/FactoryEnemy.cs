@@ -4,6 +4,9 @@ using UnityEngine;
 public class FactoryEnemy : IFactoryEntity<Enemy>
 {
     private Stack<Enemy> _enemyPool = new Stack<Enemy>();
+    private List<Enemy> _enemyActive = new List<Enemy>();
+
+    public IReadOnlyList<Enemy> EnemyActive => _enemyActive;
     public Enemy CreateEntity(Enemy enemyPrefab, Vector2 posSpawn)
     {
         Enemy enemy;
@@ -11,6 +14,7 @@ public class FactoryEnemy : IFactoryEntity<Enemy>
         {
             enemy = _enemyPool.Pop();
             enemy.transform.SetLocalPositionAndRotation(posSpawn, Quaternion.identity);
+
         }
         else
         {

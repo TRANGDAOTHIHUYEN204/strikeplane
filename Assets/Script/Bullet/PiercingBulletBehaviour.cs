@@ -1,15 +1,19 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PiercingBulletBehaviour : BulletBehaviour
 {
-    private int _countPiercing;
-    public PiercingBulletBehaviour(int count)
+    private int _hitCount;
+    public int HitCount => _hitCount;
+    public PiercingBulletBehaviour()
     {
-        count = _countPiercing;
+        _hitCount = 0;
+
     }
     public override bool OnHit(BulletInformation bulletInfor)
     {
-        bulletInfor.currentTarget.TakeDamage(bulletInfor.bullet.Damage);
-        return _countPiercing-- <= 0;
+        bulletInfor.currentTarget.TakeDamage(bulletInfor.damage);
+        _hitCount++;
+        return false;
     }
 }

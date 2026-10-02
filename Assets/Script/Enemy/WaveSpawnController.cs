@@ -26,10 +26,6 @@ public class WaveSpawnController : MonoBehaviour
         {
             WaveSpawn();
         }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TestingEnemyPoolingInvalid();
-        }
     }
     public void WaveSpawn()
     {

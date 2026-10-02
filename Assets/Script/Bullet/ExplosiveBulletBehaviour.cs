@@ -9,7 +9,7 @@ public class ExplosiveBulletBehaviour : BulletBehaviour
     }
     public override bool OnHit(BulletInformation bulletInfor)
     {
-        bulletInfor.bulletAttackWorld.AttackArea(bulletInfor.currentPos, _radius, bulletInfor.bullet.Damage , bulletInfor.bullet.TargetLayer);
+        bulletInfor.bulletAttackWorld.AttackArea(bulletInfor.currentPos, _radius, bulletInfor.damage , bulletInfor.bullet.TargetLayer);
         return true;
     }
 }
