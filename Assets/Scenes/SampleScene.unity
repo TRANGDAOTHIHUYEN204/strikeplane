@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 1458889430}
   - component: {fileID: 1458889429}
   m_Layer: 0
-  m_Name: WaveSpawn
+  m_Name: WaveSpawnEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,6 +877,7 @@ MonoBehaviour:
   _bulletFactory: {fileID: 389158447}
   _bulletDataBase: {fileID: 11400000, guid: 9508fe4071d053e47ab1b694bd15f83f, type: 2}
   playerPoint: {fileID: 2126538328}
+  _spawnEnemy: {fileID: 1458889429}
 --- !u!1 &2126538327
 GameObject:
   m_ObjectHideFlags: 0

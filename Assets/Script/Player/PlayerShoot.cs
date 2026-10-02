@@ -36,7 +36,7 @@ public class PlayerShoot : MonoBehaviour
             if (CanShoot())
             {
                 _bulletFactory.CreateBullet(_bulletDataBase, playerPoint.position, Vector2.up);
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(1f);
             }
             else
             {

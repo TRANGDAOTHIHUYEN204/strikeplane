@@ -16,6 +16,6 @@ MonoBehaviour:
   _bulletType: 0
   layerTarget:
     serializedVersion: 2
-    m_Bits: 4294967295
-  _lifeTime: 5
+    m_Bits: 128
+  _lifeTime: 4
   _speedMove: 2

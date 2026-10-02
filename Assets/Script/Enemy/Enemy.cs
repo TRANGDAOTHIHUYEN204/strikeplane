@@ -9,7 +9,8 @@ public class Enemy : Damageable
     public int CurrentHp => _characterHealthSystem.CurrentHp;
     public bool IsDead => _characterHealthSystem.IsDead;
     public int AttackSpeed => _enemyData.AttackSpeed;
-    
+    public int DamageInteract => _enemyData.DamageInteract;
+
     private void Awake()
     {
         _enemyMovement = GetComponent<EnemyMovement>();

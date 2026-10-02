@@ -7,8 +7,11 @@ public class WaveSpawnController : MonoBehaviour
 
     [SerializeField] private EnemyData _enemyData;
     [SerializeField] private Enemy _enemyPrefab;
+    private Enemy _enemy;
+    private int currentCountEnemy;
+    [SerializeField] private float _timeSpawnEnemy;
+    private float _currentTime;
 
-    private Enemy _enemyTesting;
     private void Awake()
     {
         _spawnEnemy = GetComponent<SpawnEnemy>();
@@ -19,25 +22,21 @@ public class WaveSpawnController : MonoBehaviour
             
         }
     }
-    // testing
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (currentCountEnemy >= _spawnCount) return;
+        _currentTime += Time.deltaTime;
+        if (_currentTime >= _timeSpawnEnemy)
         {
             WaveSpawn();
+            _currentTime = 0f;
         }
+        
     }
     public void WaveSpawn()
     {
-        Debug.Log("Spawn lần 1");
-        _enemyTesting = _spawnEnemy.SpawnEnemyWave(_enemyPrefab, _enemyData);
-        
-    }
-    private void TestingEnemyPoolingInvalid()
-    {
-        Debug.Log("Enemy takes damage: ");
-        _enemyTesting.TakeDamage(90);
-        Debug.Log($"Enemy current Hp: {_enemyTesting.CurrentHp}");
-        
+        Debug.Log("Spawn 1 enemy ");
+        _enemy = _spawnEnemy.SpawnEnemyWave(_enemyPrefab, _enemyData);
+        currentCountEnemy ++;
     }
 }
