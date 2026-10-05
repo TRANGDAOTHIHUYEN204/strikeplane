@@ -6,7 +6,8 @@ public class ScoreManager : MonoBehaviour
     private float score;
     private int countKill;
     private int totalKill;
-    
+    private const string SCORE_KEY = "Score";
+
     public static ScoreManager Instance { get; private set; }
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI killText;
@@ -25,6 +26,7 @@ public class ScoreManager : MonoBehaviour
     }
     private void Start()
     {
+        score = PlayerPrefs.GetFloat(SCORE_KEY, 0f);
         ApplyScore();
         ApplyKill();
 
@@ -32,12 +34,17 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(float amount)
     {
         score += amount;
+        PlayerPrefs.SetFloat(SCORE_KEY, score);
+        PlayerPrefs.Save();
+
         ApplyScore();
+
         Debug.Log(score);
     }
     public void AddKill()
     {
         countKill++;
+
         ApplyKill();
     }
     public void SetTotalKill(int enemySpawn)
@@ -51,6 +58,8 @@ public class ScoreManager : MonoBehaviour
         score = 0f;
         countKill = 0;
         totalKill = 0;
+        PlayerPrefs.DeleteKey(SCORE_KEY);
+        PlayerPrefs.Save();
         ApplyScore();
         ApplyKill();
     }

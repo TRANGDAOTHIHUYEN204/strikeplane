@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum BulletType
@@ -16,6 +17,8 @@ public class BulletDataBase : ScriptableObject
     [SerializeField] private LayerMask layerTarget;
     [SerializeField] private float _lifeTime;
     [SerializeField] private float _speedMove;
+    [SerializeField] private SpriteRenderer _powerUpIcon;
+
     public int Damage
     {
         get {  return _damage; }
@@ -33,4 +36,5 @@ public class BulletDataBase : ScriptableObject
     }
     public float LifeTime => _lifeTime;
     public float SpeedMove => _speedMove;
+    public SpriteRenderer PowerUpIcon => _powerUpIcon;
 }

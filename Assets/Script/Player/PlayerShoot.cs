@@ -29,7 +29,7 @@ public class PlayerShoot : MonoBehaviour
 
     void OnEnable()
     {
-        PowerUp.OnPowerUpCollected += ChangeBulletDataBase;
+        PowerUpPlayer.OnPowerUpCollected += ChangeBulletDataBase;
         StartCoroutine(DelayShoot());
     }
     private IEnumerator DelayShoot()
@@ -64,7 +64,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void OnDisable()
     {
-        PowerUp.OnPowerUpCollected -= ChangeBulletDataBase;
+        PowerUpPlayer.OnPowerUpCollected -= ChangeBulletDataBase;
     }
     public void ChangeBulletDataBase(BulletDataBase bulletDataBase, float duration)
     {

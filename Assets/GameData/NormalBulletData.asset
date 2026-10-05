@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e613a251a5925d4883626f395c0a1ba, type: 3}
-  m_Name: PiercingBulletData
+  m_Name: NormalBulletData
   m_EditorClassIdentifier: Assembly-CSharp::BulletDataBase
   _damage: 50
-  _bulletType: 1
+  _bulletType: 0
   layerTarget:
     serializedVersion: 2
     m_Bits: 128
   _lifeTime: 3.2
   _speedMove: 2
-  _powerUpIcon: {fileID: 0}
+  _powerUpIcon: {fileID: 21300000, guid: fdbb98758a20ad844ab8b060f20d8244, type: 3}
