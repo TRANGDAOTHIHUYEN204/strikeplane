@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PowerUpPlayer : MonoBehaviour
@@ -7,6 +8,7 @@ public class PowerUpPlayer : MonoBehaviour
 
     [SerializeField] private BulletDataBase powerUpBulletData;
     [SerializeField] private SpriteRenderer spriteBullet;
+    [SerializeField] private PowerUpPlayerSpawn _powerUpPlayerSpawn;
 
     public void Init(BulletDataBase data)
     {
@@ -25,6 +27,6 @@ public class PowerUpPlayer : MonoBehaviour
     }
     public void Despawn()
     {
-
+        _powerUpPlayerSpawn.Release(this);
     }
 }
