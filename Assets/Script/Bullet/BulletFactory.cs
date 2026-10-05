@@ -18,6 +18,7 @@ public class BulletFactory : MonoBehaviour
             bullet = Instantiate(_bulletPrefab);
         }
         bullet.Init(bulletDatabase,this, pos, direction);
+
         return bullet;
     }
     public void ReturnBullet(Bullet bullet)

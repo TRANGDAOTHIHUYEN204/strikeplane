@@ -17,5 +17,5 @@ MonoBehaviour:
   layerTarget:
     serializedVersion: 2
     m_Bits: 128
-  _lifeTime: 4
+  _lifeTime: 3.2
   _speedMove: 2

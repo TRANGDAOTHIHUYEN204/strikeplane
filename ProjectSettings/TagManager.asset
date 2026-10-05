@@ -4,16 +4,9 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Planet
+  - Undefined
   - Enemy
-  - Bonus
   - Projectile
-  - Score
-  - Health
-  - CoinsText
-  - Coin
-  - PlayerRay
-  - Rocket
   layers:
   - Default
   - TransparentFX
@@ -71,6 +64,9 @@ TagManager:
     locked: 0
   - name: VFX
     uniqueID: 738997965
+    locked: 0
+  - name: UI
+    uniqueID: 3473508619
     locked: 0
   m_RenderingLayers:
   - Default

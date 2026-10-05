@@ -11,7 +11,6 @@ public class WaveSpawnController : MonoBehaviour
     private int currentCountEnemy;
     [SerializeField] private float _timeSpawnEnemy;
     private float _currentTime;
-
     private void Awake()
     {
         _spawnEnemy = GetComponent<SpawnEnemy>();
@@ -22,8 +21,13 @@ public class WaveSpawnController : MonoBehaviour
             
         }
     }
+    private void Start()
+    {
+        ScoreManager.Instance.SetTotalKill(_spawnCount);
+    }
     private void Update()
     {
+        if (LoseManager.isGameOver) return;
         if (currentCountEnemy >= _spawnCount) return;
         _currentTime += Time.deltaTime;
         if (_currentTime >= _timeSpawnEnemy)

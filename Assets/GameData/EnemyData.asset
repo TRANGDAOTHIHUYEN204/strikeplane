@@ -17,3 +17,5 @@ MonoBehaviour:
   _armor: 5
   _attackSpeed: 5
   _speedMove: 2
+  _damageInteract: 50
+  _scoreBase: 20

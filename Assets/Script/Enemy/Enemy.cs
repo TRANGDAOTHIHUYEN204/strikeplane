@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Enemy : Damageable
@@ -10,6 +11,7 @@ public class Enemy : Damageable
     public bool IsDead => _characterHealthSystem.IsDead;
     public int AttackSpeed => _enemyData.AttackSpeed;
     public int DamageInteract => _enemyData.DamageInteract;
+    public float ScoreEnemy => _enemyData.ScoreBaseEnemy;
 
     private void Awake()
     {
@@ -47,6 +49,8 @@ public class Enemy : Damageable
     private void OnDie()
     {
         Debug.Log("Enemy is dead");
+        ScoreManager.Instance.AddScore(ScoreEnemy);
+        ScoreManager.Instance.AddKill();
         _enemyPool.Release(this);
     }
     public void Despawn()

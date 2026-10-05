@@ -6,7 +6,7 @@ public class CharacterHealthSystem
     private int _currentHp;
     private bool _isDead;
     private int _maxHp;
-    public Action DieAction;
+    public event Action DieAction;
 
     public int CurrentHp
     {

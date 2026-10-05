@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   _name: 
   _maxHp: 100
-  _armor: 5
+  _armor: 0
