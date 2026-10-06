@@ -21,5 +21,5 @@ public class Player : Damageable
         Debug.Log("Player is dead");
         OnDie?.Invoke();
     }
-
+    public void ResetPlayer() => _characterHealthSystem.ResetHpPlayer();
 }

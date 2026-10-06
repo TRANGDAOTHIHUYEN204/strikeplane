@@ -364,6 +364,9 @@ MonoBehaviour:
   _loseGameManager: {fileID: 1219785782}
   _waveSpawnController: {fileID: 1458889430}
   _scoreManager: {fileID: 1137933274}
+  _player: {fileID: 2098427084}
+  _powerUpPlayerSpawn: {fileID: 1800783938}
+  _playerShoot: {fileID: 2098427086}
 --- !u!1 &239490542
 GameObject:
   m_ObjectHideFlags: 0

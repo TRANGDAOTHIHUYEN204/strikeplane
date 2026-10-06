@@ -36,4 +36,6 @@ public class PowerUpPlayer : MonoBehaviour
     {
         _powerUpPlayerSpawn.Release(this);
     }
+
+    
 }

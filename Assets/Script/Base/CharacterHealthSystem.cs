@@ -49,4 +49,9 @@ public class CharacterHealthSystem
         _isDead = true;
         DieAction?.Invoke();
     }
+    public void ResetHpPlayer()
+    {
+        _currentHp = _maxHp;
+        _isDead = false;
+    }
 }

@@ -7,6 +7,7 @@ public class PowerUpPlayerSpawn : MonoBehaviour
     [SerializeField] private float _spawnInterval = 3f;
     private float _currentTime;
     private Stack<PowerUpPlayer> _powerUpPool = new Stack<PowerUpPlayer>();
+    private List<PowerUpPlayer> _powerUpActive = new List<PowerUpPlayer>();
     private void Update()
     {
         if (LoseManager.isGameOver) return;
@@ -21,25 +22,33 @@ public class PowerUpPlayerSpawn : MonoBehaviour
 
     private void SpawnPowerUp()
     {
-        PowerUpPlayer powerUpPlayer;
+        PowerUpPlayer currentPowerUpPlayer;
         BulletDataBase randomData = GetRandomBulletData();
         Vector2 randomPosition = GetRandomPosition();
 
         if (_powerUpPool.Count > 0)
         {
-            powerUpPlayer = _powerUpPool.Pop();
-            powerUpPlayer.transform.position = randomPosition;
-            powerUpPlayer.gameObject.SetActive(true);
+            currentPowerUpPlayer = _powerUpPool.Pop();
+            currentPowerUpPlayer.transform.position = randomPosition;
+            currentPowerUpPlayer.gameObject.SetActive(true);
         }
         else
         {
-            powerUpPlayer = Instantiate(_powerupPlayer, randomPosition, Quaternion.identity);
+            currentPowerUpPlayer = Instantiate(_powerupPlayer, randomPosition, Quaternion.identity);
         }
 
-        powerUpPlayer.Init(randomData, this);
+        currentPowerUpPlayer.Init(randomData, this);
+        _powerUpActive.Add(currentPowerUpPlayer);
         Debug.Log($"random : {randomData.name}");
     }
-
+    public void ResetPowerUpPlayer()
+    {
+        while (_powerUpActive.Count > 0)
+        {
+            PowerUpPlayer powerUpActive = _powerUpActive[_powerUpActive.Count - 1];
+            Release(powerUpActive);
+        }
+    }
     private BulletDataBase GetRandomBulletData()
     {
         int index = Random.Range(0, _bulletDatabase.Length);
@@ -48,6 +57,7 @@ public class PowerUpPlayerSpawn : MonoBehaviour
     public void Release(PowerUpPlayer powerUpPlayer)
     {
         powerUpPlayer.gameObject.SetActive(false);
+        _powerUpActive.Remove(powerUpPlayer);
         _powerUpPool.Push(powerUpPlayer);
     }
     private Vector2 GetRandomPosition()

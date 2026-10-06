@@ -8,7 +8,9 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private Transform playerPoint;
     [SerializeField] private SpawnEnemy _spawnEnemy;
     private IReadOnlyList<Enemy> _enemyActive => _spawnEnemy._enemyActive;
-    private Coroutine _coroutine;
+    private Coroutine _shootCoroutine;
+    private Coroutine _powerUpCoroutine;
+    
 
     private void Awake()
     {
@@ -26,28 +28,32 @@ public class PlayerShoot : MonoBehaviour
         }
 
     }
-
+    public void ResetBulletPlayer() => _bulletFactory.ResetBullet();
     void OnEnable()
     {
         PowerUpPlayer.OnPowerUpCollected += ChangeBulletDataBase;
-        StartCoroutine(DelayShoot());
+        _shootCoroutine = StartCoroutine(DelayShoot());
     }
     private IEnumerator DelayShoot()
     {
         while (true)
         {
-            if (!LoseManager.isGameOver)
+            if (LoseManager.isGameOver)
             {
+                yield return null;
+                continue;
+            }
+            
                 if (CanShoot())
                 {
                     _bulletFactory.CreateBullet(_bulletDataBase, playerPoint.position, Vector2.up);
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(0.3f);
                 }
                 else
                 {
                     yield return null;
                 }
-            }
+            
         }
 
     }
@@ -68,15 +74,26 @@ public class PlayerShoot : MonoBehaviour
     private void OnDisable()
     {
         PowerUpPlayer.OnPowerUpCollected -= ChangeBulletDataBase;
+        if (_shootCoroutine != null)
+        {
+            StopCoroutine(_shootCoroutine);
+            _shootCoroutine = null;
+        }
+
+        if (_powerUpCoroutine != null)
+        {
+            StopCoroutine(_powerUpCoroutine);
+            _powerUpCoroutine = null;
+        }
     }
     public void ChangeBulletDataBase(BulletDataBase bulletDataBase, float duration)
     {
-        if (_coroutine != null)
+        if (_powerUpCoroutine != null)
         {
-            StopCoroutine(_coroutine);
+            StopCoroutine(_powerUpCoroutine);
 
         }
-        _coroutine = StartCoroutine(PowerUpRoutine(bulletDataBase, duration));
+        _powerUpCoroutine = StartCoroutine(PowerUpRoutine(bulletDataBase, duration));
     }
     private IEnumerator PowerUpRoutine(BulletDataBase powerUpData, float duration)
     {
@@ -84,6 +101,6 @@ public class PlayerShoot : MonoBehaviour
         _bulletDataBase = powerUpData;
         yield return new WaitForSeconds(duration);
         _bulletDataBase = originalBulletData;
-        _coroutine = null;
+        _powerUpCoroutine = null;
     }
 }
