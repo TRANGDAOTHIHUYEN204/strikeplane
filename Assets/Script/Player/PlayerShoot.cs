@@ -34,16 +34,19 @@ public class PlayerShoot : MonoBehaviour
     }
     private IEnumerator DelayShoot()
     {
-        while (!LoseManager.isGameOver)
+        while (true)
         {
-            if (CanShoot())
+            if (!LoseManager.isGameOver)
             {
-                _bulletFactory.CreateBullet(_bulletDataBase, playerPoint.position, Vector2.up);
-                yield return new WaitForSeconds(0.5f);
-            }
-            else
-            {
-                yield return null;
+                if (CanShoot())
+                {
+                    _bulletFactory.CreateBullet(_bulletDataBase, playerPoint.position, Vector2.up);
+                    yield return new WaitForSeconds(0.5f);
+                }
+                else
+                {
+                    yield return null;
+                }
             }
         }
 
