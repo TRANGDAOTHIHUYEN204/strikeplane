@@ -9,6 +9,7 @@ public class PowerUpPlayerSpawn : MonoBehaviour
     private Stack<PowerUpPlayer> _powerUpPool = new Stack<PowerUpPlayer>();
     private void Update()
     {
+        if (LoseManager.isGameOver) return;
         _currentTime += Time.deltaTime;
 
         if (_currentTime >= _spawnInterval)
@@ -35,7 +36,8 @@ public class PowerUpPlayerSpawn : MonoBehaviour
             powerUpPlayer = Instantiate(_powerupPlayer, randomPosition, Quaternion.identity);
         }
 
-        powerUpPlayer.Init(randomData);
+        powerUpPlayer.Init(randomData, this);
+        Debug.Log($"random : {randomData.name}");
     }
 
     private BulletDataBase GetRandomBulletData()
@@ -51,7 +53,7 @@ public class PowerUpPlayerSpawn : MonoBehaviour
     private Vector2 GetRandomPosition()
     {
         float x = Random.Range(ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
-        float y = Random.Range(ScreenBoudaries.MinY, ScreenBoudaries.MaxY);
+        float y = ScreenBoudaries.MaxY + 1f;
 
         return new Vector2(x, y);
     }

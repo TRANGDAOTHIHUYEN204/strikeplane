@@ -17,7 +17,7 @@ public class BulletDataBase : ScriptableObject
     [SerializeField] private LayerMask layerTarget;
     [SerializeField] private float _lifeTime;
     [SerializeField] private float _speedMove;
-    [SerializeField] private SpriteRenderer _powerUpIcon;
+    [SerializeField] private Sprite _powerUpIcon;
 
     public int Damage
     {
@@ -36,5 +36,5 @@ public class BulletDataBase : ScriptableObject
     }
     public float LifeTime => _lifeTime;
     public float SpeedMove => _speedMove;
-    public SpriteRenderer PowerUpIcon => _powerUpIcon;
+    public Sprite PowerUpIcon => _powerUpIcon;
 }

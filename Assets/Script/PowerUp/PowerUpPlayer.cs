@@ -1,28 +1,35 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PowerUpPlayer : MonoBehaviour
 {
     public static Action<BulletDataBase, float> OnPowerUpCollected;
 
-    [SerializeField] private BulletDataBase powerUpBulletData;
-    [SerializeField] private SpriteRenderer spriteBullet;
-    [SerializeField] private PowerUpPlayerSpawn _powerUpPlayerSpawn;
+    private BulletDataBase powerUpBulletData;
+    private SpriteRenderer spriteBullet;
+    private PowerUpPlayerSpawn _powerUpPlayerSpawn;
+    private PowerUpMovement _powerUpMovement;
 
-    public void Init(BulletDataBase data)
+    private void Awake()
+    {
+        spriteBullet = GetComponent<SpriteRenderer>();
+        _powerUpMovement = GetComponent<PowerUpMovement>();
+    }
+    public void Init(BulletDataBase data, PowerUpPlayerSpawn spawn)
     {
         powerUpBulletData = data;
-        spriteBullet = data.PowerUpIcon;
+        _powerUpPlayerSpawn = spawn;
+        spriteBullet.sprite = data.PowerUpIcon;
+        _powerUpMovement.Init(this, 2f);
     }
 
     private void OnTriggerEnter2D(Collider2D colliderTarget)
     {
-        if (colliderTarget.CompareTag("Player"))
+        if (colliderTarget.TryGetComponent(out Player player))
         {
-            OnPowerUpCollected?.Invoke(powerUpBulletData, 1f);
-
-            //Destroy(gameObject);
+            Debug.Log("Interact with Player");
+            OnPowerUpCollected?.Invoke(powerUpBulletData, 5f);
+            Despawn();
         }
     }
     public void Despawn()

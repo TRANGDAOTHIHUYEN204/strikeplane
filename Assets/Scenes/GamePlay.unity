@@ -1938,6 +1938,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775040485}
   m_CullTransparentMesh: 1
+--- !u!1 &1800783937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800783939}
+  - component: {fileID: 1800783938}
+  m_Layer: 0
+  m_Name: SpawnPowerUpPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1800783938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800783937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90cb3ed3279ecea4bad0c9d35ed1d840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpPlayerSpawn
+  _powerupPlayer: {fileID: 5923509479833338568, guid: c1ece10091eb767499aa21b351131ce0,
+    type: 3}
+  _bulletDatabase:
+  - {fileID: 11400000, guid: 4adf59ba71a6d4746b78380d56d07c69, type: 2}
+  - {fileID: 11400000, guid: b60a8184f8d2b584482821360b50621e, type: 2}
+  - {fileID: 11400000, guid: 91f029891e8235c4ba8d745d2a99058c, type: 2}
+  _spawnInterval: 3
+--- !u!4 &1800783939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800783937}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1772, y: -0.15503, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848854173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,3 +2598,4 @@ SceneRoots:
   - {fileID: 1137933275}
   - {fileID: 1219785783}
   - {fileID: 2098427082}
+  - {fileID: 1800783939}
