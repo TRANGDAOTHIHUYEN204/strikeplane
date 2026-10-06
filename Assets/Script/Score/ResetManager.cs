@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class ResetManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] LoseManager _loseGameManager;
+    [SerializeField] WaveSpawnController _waveSpawnController;
+    [SerializeField] private ScoreManager _scoreManager;
+    public void ResetGame()
     {
-        
+        _waveSpawnController.ResetSpawn();
+        _loseGameManager.ResetStatGame();
+        _scoreManager.ResetScore();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

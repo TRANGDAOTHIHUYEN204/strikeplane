@@ -33,4 +33,12 @@ public class FactoryEnemy : IFactoryEntity<Enemy>
         enemy.gameObject.SetActive(false);
         _enemyPool.Push(enemy);
     }
+    public void ResetEnemy()
+    {
+        while (_enemyActive.Count > 0)
+        {
+            Enemy enemyActive = _enemyActive[_enemyActive.Count - 1];
+            Release(enemyActive);
+        }
+    }
 }

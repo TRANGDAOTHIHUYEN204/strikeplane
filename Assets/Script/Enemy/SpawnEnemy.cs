@@ -30,5 +30,6 @@ public class SpawnEnemy : MonoBehaviour
         float y = ScreenBoudaries.MaxY + _spawnOffet;
         return new Vector2(x, y); 
     }
+    public void ResetEnemy() => _factoryEnemy.ResetEnemy();
 
 }

@@ -15,6 +15,9 @@ public class LoseManager : MonoBehaviour
         LosePanel.SetActive(true);
         isGameOver = true;
     }
-
+    public void ResetStatGame()
+    {
+        isGameOver = false;
+    }
     private void OnDestroy() => isGameOver = false;
 }

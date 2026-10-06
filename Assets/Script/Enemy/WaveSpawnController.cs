@@ -8,7 +8,7 @@ public class WaveSpawnController : MonoBehaviour
     [SerializeField] private EnemyData _enemyData;
     [SerializeField] private Enemy _enemyPrefab;
     private Enemy _enemy;
-    private int currentCountEnemy;
+    private int _currentCountEnemy;
     [SerializeField] private float _timeSpawnEnemy;
     private float _currentTime;
     private void Awake()
@@ -28,7 +28,7 @@ public class WaveSpawnController : MonoBehaviour
     private void Update()
     {
         if (LoseManager.isGameOver) return;
-        if (currentCountEnemy >= _spawnCount) return;
+        if (_currentCountEnemy >= _spawnCount) return;
         _currentTime += Time.deltaTime;
         if (_currentTime >= _timeSpawnEnemy)
         {
@@ -39,8 +39,14 @@ public class WaveSpawnController : MonoBehaviour
     }
     public void WaveSpawn()
     {
-        Debug.Log("Spawn 1 enemy ");
         _enemy = _spawnEnemy.SpawnEnemyWave(_enemyPrefab, _enemyData);
-        currentCountEnemy ++;
+        _currentCountEnemy ++;
     }
+    public void ResetSpawn()
+    {
+        _currentCountEnemy = 0;
+        _currentTime = 0f;
+        _spawnEnemy.ResetEnemy();
+    }
+
 }
