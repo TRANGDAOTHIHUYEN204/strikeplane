@@ -15,7 +15,7 @@ public class HomingBulletBehaviour : BulletBehaviour
     {
         if (bulletInfor.currentTarget == null || !bulletInfor.currentTarget.gameObject.activeInHierarchy)
         {
-            bulletInfor.bulletAttackWorld.FindNearest(bulletInfor.currentPos, _searchRange, bulletInfor.bullet.TargetLayer);
+            bulletInfor.currentTarget = bulletInfor.bulletAttackWorld.FindNearest(bulletInfor.currentPos, _searchRange, bulletInfor.bullet.TargetLayer);
         }
         if (bulletInfor.currentTarget != null)
         {

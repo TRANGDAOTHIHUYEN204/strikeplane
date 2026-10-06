@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class WaveSpawnController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class WaveSpawnController : MonoBehaviour
     private int _currentCountEnemy;
     [SerializeField] private float _timeSpawnEnemy;
     private float _currentTime;
+    [SerializeField] private LoseManager _loseManager;
+    private Coroutine _winCoroutine;
     private void Awake()
     {
         _spawnEnemy = GetComponent<SpawnEnemy>();
@@ -37,16 +40,38 @@ public class WaveSpawnController : MonoBehaviour
         }
         
     }
+    private IEnumerator WaitForWin()
+    {
+        yield return new WaitForSeconds(1f);
+
+        while (FindObjectsByType<Enemy>(FindObjectsSortMode.None).Length > 0)
+            yield return new WaitForSeconds(0.5f);
+
+        if (!LoseManager.isGameOver)
+            ShowWin();
+    }
+    private void ShowWin()
+    {
+        _loseManager.SetActiveWinPanel();
+    }
     public void WaveSpawn()
     {
         _enemy = _spawnEnemy.SpawnEnemyWave(_enemyPrefab, _enemyData);
         _currentCountEnemy ++;
+
+        if (_currentCountEnemy >= _spawnCount)
+            _winCoroutine = StartCoroutine(WaitForWin());
+
     }
     public void ResetSpawn()
     {
+        if (_winCoroutine != null)
+        {
+            StopCoroutine(_winCoroutine);
+            _winCoroutine = null;
+        }
         _currentCountEnemy = 0;
         _currentTime = 0f;
         _spawnEnemy.ResetEnemy();
     }
-
 }
