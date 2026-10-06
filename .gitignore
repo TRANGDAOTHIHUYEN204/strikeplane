@@ -2,6 +2,7 @@
 Library/
 Temp/
 Build/
+Logs/
 
 *.csproj
 *.sln
@@ -15,5 +16,5 @@ UserSettings/EditorUserSettings.asset
 !Assets/ImportantFile.csproj
 .vs/
 
-# Unity Editor user settings
+
 UserSettings/
