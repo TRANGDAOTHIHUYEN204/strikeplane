@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private float score;
+    private float currentScore;
+    private float highScore;
     private int countKill;
     private int totalKill;
-    private const string SCORE_KEY = "Score";
+    private const string SCORE_KEY = "highScore";
 
     public static ScoreManager Instance { get; private set; }
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI killText;
     [SerializeField] private TextMeshProUGUI killTotal;
+    [SerializeField] private TextMeshProUGUI textHighScore;
 
     private void Awake()
     {
@@ -26,20 +28,26 @@ public class ScoreManager : MonoBehaviour
     }
     private void Start()
     {
-        score = PlayerPrefs.GetFloat(SCORE_KEY, 0f);
+        highScore = PlayerPrefs.GetFloat(SCORE_KEY, 0f);
+        currentScore = 0f;
         ApplyScore();
         ApplyKill();
+        ApplyHighScore();
 
     }
     public void AddScore(float amount)
     {
-        score += amount;
-        PlayerPrefs.SetFloat(SCORE_KEY, score);
-        PlayerPrefs.Save();
+        currentScore += amount;
+
+        if (currentScore > highScore)
+        {
+            highScore = currentScore;
+            PlayerPrefs.SetFloat(SCORE_KEY, highScore);
+            PlayerPrefs.Save();
+            ApplyHighScore();
+        }
 
         ApplyScore();
-
-        Debug.Log(score);
     }
     public void AddKill()
     {
@@ -55,11 +63,9 @@ public class ScoreManager : MonoBehaviour
 
     public void ResetScore()
     {
-        score = 0f;
+        currentScore = 0f;
         countKill = 0;
         totalKill = 0;
-        PlayerPrefs.DeleteKey(SCORE_KEY);
-        PlayerPrefs.Save();
         ApplyScore();
         ApplyKill();
     }
@@ -67,7 +73,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = score.ToString("F0");
+            scoreText.text = currentScore.ToString("F0");
         }
     }
     private void ApplyKill()
@@ -78,6 +84,13 @@ public class ScoreManager : MonoBehaviour
         }
         
     }
+    private void ApplyHighScore()
+    {
+        if (textHighScore != null)
+        {
+            textHighScore.text = highScore.ToString("F0");
+        }
+    }
     private void ApplyTotalKill()
     {
         if (killTotal != null)
@@ -85,5 +98,12 @@ public class ScoreManager : MonoBehaviour
             killTotal.text = totalKill.ToString();
         }
     }
-    
+    private void ClearHighScore()
+    {
+        highScore = 0f;
+        PlayerPrefs.DeleteKey(SCORE_KEY);
+        PlayerPrefs.Save();
+        ApplyHighScore();
+    }
+
 }

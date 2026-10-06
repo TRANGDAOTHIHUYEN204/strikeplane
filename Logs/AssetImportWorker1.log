@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.3/staging' branch; Version is '6000.3.18f1 (5ebeb53e4c07) revision 6209205'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-thcha" at "2026-10-06T13:24:54.7240267Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-thcha" at "2026-10-06T23:13:06.9567693Z"
 OS: 'Windows 11  (10.0.26200) CoreSingleLanguage' Language: 'en' Physical Memory: 15752 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-10-06T13:24:54Z
+Date: 2026-10-06T23:13:06Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.3.18f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ D:/Unity Projects/strikeplane
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49703
+56673
 -licensingIpc
 LicenseClient-thcha
 -job-worker-count
@@ -67,12 +67,12 @@ D:/Unity Projects/strikeplane
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
-Player connection [16556]  Target information:
+Player connection [16536]  Target information:
 
-Player connection [16556]  * "[IP] 192.168.1.138 [Port] 0 [Flags] 2 [Guid] 3394700222 [EditorId] 3394700222 [Version] 1048832 [Id] WindowsEditor(7,Chang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [16536]  * "[IP] 192.168.1.138 [Port] 0 [Flags] 2 [Guid] 1276194816 [EditorId] 1276194816 [Version] 1048832 [Id] WindowsEditor(7,Chang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16556] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [16556] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16536] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [16536] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -84,7 +84,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.80 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.37 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.3.18f1 (5ebeb53e4c07)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -102,7 +102,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56288
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
@@ -112,19 +112,19 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.18f1/
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-thcha"
 [Licensing::IpcConnector] LicenseClient-thcha channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-thcha-6000.3.18" at "2026-10-06T13:24:57.2115125Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 7208, path: "C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-thcha-6000.3.18" at "2026-10-06T23:13:09.0209197Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 9332, path: "C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              1f3baf0eb9bb4927b64387c3598204e1
-  Correlation Id:          0a9c914118e460d53971702f2b6cfcfc
-  External correlation Id: 4499518777798079346
+  Session Id:              5dd0764f94514a74aae7c86f27a794ab
+  Correlation Id:          b0dbffd9c27525fda47ea2413b074625
+  External correlation Id: 8342206838494964579
   Machine Id:              EEQ+BpNolGNsjQXtpsYX6el56bk=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-thcha-6000.3.18" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-thcha-6000.3.18-notifications" at "2026-10-06T13:24:57.2251707Z"
-[Licensing::Module] Licensing Background thread has ended after 2.50s
-[Licensing::Module] Licensing is initialized (took 1.54s).
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-thcha-6000.3.18-notifications" at "2026-10-06T23:13:09.034057Z"
+[Licensing::Module] Licensing Background thread has ended after 2.08s
+[Licensing::Module] Licensing is initialized (took 1.22s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 18967967523940-UnityPersXXXX
@@ -132,45 +132,45 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.18f1/
   Type: Assigned
   Expiration: Unlimited
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.18f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 1.550570 seconds.
-- Loaded All Assemblies, in  2.042 seconds
+Registered in 1.225936 seconds.
+- Loaded All Assemblies, in  1.668 seconds
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.593 seconds
-Domain Reload Profiling: 2632ms
-	BeginReloadAssembly (152ms)
+- Finished resetting the current domain, in  0.397 seconds
+Domain Reload Profiling: 2062ms
+	BeginReloadAssembly (151ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (52ms)
+	RebuildCommonClasses (41ms)
 	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (1603ms)
-	LoadAllAssembliesAndSetupDomain (218ms)
-		LoadAssemblies (150ms)
+	initialDomainReloadingComplete (1282ms)
+	LoadAllAssembliesAndSetupDomain (178ms)
+		LoadAssemblies (148ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (214ms)
-			TypeCache.Refresh (212ms)
-				TypeCache.ScanAssembly (195ms)
+		AnalyzeDomain (174ms)
+			TypeCache.Refresh (173ms)
+				TypeCache.ScanAssembly (159ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (594ms)
+	FinalizeReload (397ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (533ms)
+		SetupLoadedEditorAssemblies (360ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (66ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (222ms)
-			ProcessInitializeOnLoadMethodAttributes (105ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (139ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -180,796 +180,98 @@ Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.147 seconds
-Refreshing native plugins compatible for Editor in 2.52 ms, found 5 plugins.
+- Loaded All Assemblies, in  0.817 seconds
+Refreshing native plugins compatible for Editor in 2.39 ms, found 5 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 2.78 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 3.02 ms, found 5 plugins.
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.985 seconds
-Domain Reload Profiling: 2126ms
-	BeginReloadAssembly (285ms)
+- Finished resetting the current domain, in  1.039 seconds
+Domain Reload Profiling: 1852ms
+	BeginReloadAssembly (197ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
-	RebuildCommonClasses (67ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (716ms)
-		LoadAssemblies (539ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (517ms)
+		LoadAssemblies (359ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (337ms)
-			TypeCache.Refresh (241ms)
-				TypeCache.ScanAssembly (219ms)
-			BuildScriptInfoCaches (81ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (985ms)
+		AnalyzeDomain (264ms)
+			TypeCache.Refresh (194ms)
+				TypeCache.ScanAssembly (174ms)
+			BuildScriptInfoCaches (60ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1039ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (826ms)
+		SetupLoadedEditorAssemblies (874ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (198ms)
-			ProcessInitializeOnLoadAttributes (504ms)
-			ProcessInitializeOnLoadMethodAttributes (100ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (230ms)
+			ProcessInitializeOnLoadAttributes (516ms)
+			ProcessInitializeOnLoadMethodAttributes (102ms)
+			AfterProcessingInitializeOnLoad (11ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 2.08 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 2.36 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 5551 unused Assets / (1.9 MB). Loaded Objects now: 6140.
-Memory consumption went from 113.0 MB to 111.1 MB.
-Total: 8.682600 ms (FindLiveObjects: 0.518000 ms CreateObjectMapping: 0.624200 ms MarkObjects: 5.561400 ms  DeleteObjects: 1.977900 ms)
+Unloading 5552 unused Assets / (2.3 MB). Loaded Objects now: 6142.
+Memory consumption went from 113.1 MB to 110.7 MB.
+Total: 14.094600 ms (FindLiveObjects: 0.941600 ms CreateObjectMapping: 1.310200 ms MarkObjects: 9.090200 ms  DeleteObjects: 2.750600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1769239.990238 seconds.
-  path: Assets/GameData/EnemyData.asset
-  artifactKey: Guid(8f4457a582d73b44a80cf8be01569518) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/GameData/EnemyData.asset using Guid(8f4457a582d73b44a80cf8be01569518) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8fc2ac2f0d9862f49635c200a0dbbeb3') in 0.1092044 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
-  artifactKey: Guid(68e6db2ebdc24f95958faec2be5558d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF.shader using Guid(68e6db2ebdc24f95958faec2be5558d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '980b55744b61e698dbfb1b61799e3495') in 0.0226362 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Scenes/MenuLoading.unity
-  artifactKey: Guid(7c40ab791a30a844b9b2af26b6ca8eb3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scenes/MenuLoading.unity using Guid(7c40ab791a30a844b9b2af26b6ca8eb3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '48e75497c3025d908b3dbf784d893a4b') in 0.0122988 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
-  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '60cd1bec216b05fdc90a7606dbadcc65') in 0.0495411 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
-  artifactKey: Guid(f7ada0af4f174f0694ca6a487b8f543d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader using Guid(f7ada0af4f174f0694ca6a487b8f543d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1c50d9b8f7bc6690aeaab1ee37b40578') in 0.0125294 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Script/Player/PlayerHealthSystem.cs
-  artifactKey: Guid(cc9bbca95611e814fb7d808f151ed9e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Player/PlayerHealthSystem.cs using Guid(cc9bbca95611e814fb7d808f151ed9e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '70cd47300fe43247508e0736dd67e992') in 0.0203199 seconds
+  Time since last request: 1804043.314652 seconds.
+  path: Assets/Script/Bullet/BulletInteractWorld.cs
+  artifactKey: Guid(dc8ee19d125a7e1479c5eb1aa55dc844) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/Bullet/BulletInteractWorld.cs using Guid(dc8ee19d125a7e1479c5eb1aa55dc844) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f98fb919c1e1b7ff9fbd2b78a19098d0') in 0.1226285 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Script/PowerUp/PowerUpPlayerSpawn.cs
-  artifactKey: Guid(90cb3ed3279ecea4bad0c9d35ed1d840) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/PowerUp/PowerUpPlayerSpawn.cs using Guid(90cb3ed3279ecea4bad0c9d35ed1d840) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '40141038ec830330216e700e0780ec35') in 0.0132319 seconds
+  Time since last request: 0.000021 seconds.
+  path: Assets/Script/Score/ScoreManager.cs
+  artifactKey: Guid(21836396f7daf7b4db688acf0e3b97c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Score/ScoreManager.cs using Guid(21836396f7daf7b4db688acf0e3b97c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '402839bbc549f73bcbb47da5b0486d9c') in 0.000715 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Script/ScreenBoudaries.cs
-  artifactKey: Guid(434f03611d5d23442a1a34997462cee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/ScreenBoudaries.cs using Guid(434f03611d5d23442a1a34997462cee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '391362bda79f4edf7cf16b41087d3405') in 0.0110124 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Space Shooter Template FREE/Scenes/Demo_Scene.unity
-  artifactKey: Guid(d31945966fedec24fa8cf028f485e539) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Scenes/Demo_Scene.unity using Guid(d31945966fedec24fa8cf028f485e539) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1eb36f8af004c7e4cb7d8cd01f449c73') in 0.0122532 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Prefab/BulletEnemy.prefab
-  artifactKey: Guid(4dca0e2282b98a144962ca652cbf07d7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Prefab/BulletEnemy.prefab using Guid(4dca0e2282b98a144962ca652cbf07d7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '88292647efb1b18cb08bed763f46f218') in 0.048288 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Script/Bullet/BulletDataBase.cs
-  artifactKey: Guid(1e613a251a5925d4883626f395c0a1ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/BulletDataBase.cs using Guid(1e613a251a5925d4883626f395c0a1ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '82dd21f11ad0251afe4dc236b7a1a6f8') in 0.0115253 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Script/Bullet/BulletBehaviour.cs
-  artifactKey: Guid(e454f4c9ff5a0054b951ca9ccb4a6219) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/BulletBehaviour.cs using Guid(e454f4c9ff5a0054b951ca9ccb4a6219) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b3c8cd7975f121da3f7b561bac2c1a42') in 0.0131607 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Script/Player/Bootstrap.cs
-  artifactKey: Guid(f7e0ed859f892704cb70b26c8909f8ca) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Player/Bootstrap.cs using Guid(f7e0ed859f892704cb70b26c8909f8ca) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c49ac6343afd689ab5bea56211f28dc6') in 0.0120639 seconds
+  Time since last request: 0.000060 seconds.
+  path: Assets/Script/Score/ResetManager.cs
+  artifactKey: Guid(6fc66b046c1cb9941b3c8b8d033144e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/Score/ResetManager.cs using Guid(6fc66b046c1cb9941b3c8b8d033144e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4480c5b77b44aed40f094f89457b381d') in 0.0113689 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000063 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
-  artifactKey: Guid(3997e2241185407d80309a82f9148466) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc using Guid(3997e2241185407d80309a82f9148466) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a70d35d63bc1f46dbab58e8fa824737a') in 0.0110457 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph
-  artifactKey: Guid(a3d800b099a06e0478fb790c5e79057a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph using Guid(a3d800b099a06e0478fb790c5e79057a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2d07ecde0be9e866ab7716214a912140') in 0.0126944 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
-  artifactKey: Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader using Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4f201e3e0d41c0426077fb74e8b21451') in 0.0133104 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Script/Bullet/BulletFactory.cs
-  artifactKey: Guid(522e008e2439f184694b9c72db16a728) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/BulletFactory.cs using Guid(522e008e2439f184694b9c72db16a728) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '11b8feab1622402faa027132bea0a2c3') in 0.0106123 seconds
+  path: Assets/Script/Player/PlayerMoverment2D.cs
+  artifactKey: Guid(9595251ee7932444ebc46066dfa411c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/Player/PlayerMoverment2D.cs using Guid(9595251ee7932444ebc46066dfa411c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'dc354f2adf09a7791f27ec43dc7ebeaa') in 0.0097648 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000076 seconds.
-  path: Assets/Script/Bullet/BulletInteractWorld.cs
-  artifactKey: Guid(dc8ee19d125a7e1479c5eb1aa55dc844) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/BulletInteractWorld.cs using Guid(dc8ee19d125a7e1479c5eb1aa55dc844) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b938ac9621d8953a92a209647411e006') in 0.0107406 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
-  artifactKey: Guid(d930090c0cd643c7b55f19a38538c162) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc using Guid(d930090c0cd643c7b55f19a38538c162) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a4700949a0b113dde3e54ea9e15758ef') in 0.0124541 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/GameData/PlayerData.asset
-  artifactKey: Guid(397d96a6ef96b5c46a65f8c76e184faa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/GameData/PlayerData.asset using Guid(397d96a6ef96b5c46a65f8c76e184faa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '525ff710150112b9aeb20b8bee094006') in 0.0116881 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Script/Enemy/EnemyMovement.cs
-  artifactKey: Guid(02c4f8069a059ae4abfe2f91498f3de2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Enemy/EnemyMovement.cs using Guid(02c4f8069a059ae4abfe2f91498f3de2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8f5d6fd8f1681428f064f7815373efd4') in 0.0090569 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
-  artifactKey: Guid(c334973cef89a9840b0b0c507e0377ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc using Guid(c334973cef89a9840b0b0c507e0377ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '18fd36a421b1ac02922c8d0280eae2df') in 0.0125663 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Space Shooter Template FREE/Animation/Power Up Ring.controller
-  artifactKey: Guid(786042d22ff31da41b99a265c2f12ffd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Animation/Power Up Ring.controller using Guid(786042d22ff31da41b99a265c2f12ffd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f556e2b970385277d3d4a12036eaf917') in 0.0128364 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Space Shooter Template FREE/Documentation/Space Shooter FREE Manual.pdf
-  artifactKey: Guid(0077474b99667c14b9d606a2f5668fe2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Documentation/Space Shooter FREE Manual.pdf using Guid(0077474b99667c14b9d606a2f5668fe2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6a8a53b22278abdc1e40f65ca454604f') in 0.0142653 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
-  artifactKey: Guid(fe393ace9b354375a9cb14cdbbc28be4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader using Guid(fe393ace9b354375a9cb14cdbbc28be4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3265a11583cae291576ed2e5f1b5a09d') in 0.0128982 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/GameData/ExplosiveBulletData.asset
-  artifactKey: Guid(4adf59ba71a6d4746b78380d56d07c69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/GameData/ExplosiveBulletData.asset using Guid(4adf59ba71a6d4746b78380d56d07c69) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '64b9b0a61e2fe0de10cc0d5786226cbf') in 0.0164129 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000104 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/VFX/Enemy Explosion PC.prefab
-  artifactKey: Guid(031faf5ef0ec4c34c86671fa3e2e81d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/VFX/Enemy Explosion PC.prefab using Guid(031faf5ef0ec4c34c86671fa3e2e81d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd528b7efb1942377a23efadc564e7bb8') in 0.0211722 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Background/Stars-Medium_1_1.png
-  artifactKey: Guid(cae821368cd9f694f9e65ba82e1564f8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Background/Stars-Medium_1_1.png using Guid(cae821368cd9f694f9e65ba82e1564f8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter)[Licensing::Client] Successfully resolved entitlement details
- -> (artifact id: '546a3dba192b40a5da51af3de3d256c7') in 0.0677679 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/VFX/Enemy Explosion_02_PC.prefab
-  artifactKey: Guid(4e19371f43812044389be8538ddac949) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/VFX/Enemy Explosion_02_PC.prefab using Guid(4e19371f43812044389be8538ddac949) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b60a3c4d2ca6974d6f25cddb2bb939f2') in 0.0167054 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000054 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Planets/Purple-Planet-wih-Moon.png
-  artifactKey: Guid(badeeac037e8bea42a8a57230ed0eb9a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Planets/Purple-Planet-wih-Moon.png using Guid(badeeac037e8bea42a8a57230ed0eb9a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd984750c3e328214536843158384941e') in 0.0234106 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/Planets/Cream-Violet-Planet.prefab
-  artifactKey: Guid(14ba388dd3927af43809d67838649ea3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/Planets/Cream-Violet-Planet.prefab using Guid(14ba388dd3927af43809d67838649ea3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9dc57f1bc938cdd7e0f28c23bb7aacd4') in 0.0383588 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/Planets/Purple-Planet-wih-Moon.prefab
-  artifactKey: Guid(c1ae0b8d643fbea439d40b05d4acd750) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/Planets/Purple-Planet-wih-Moon.prefab using Guid(c1ae0b8d643fbea439d40b05d4acd750) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a8c4d5982d78f80996729ee8bd70cfe6') in 0.0280623 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/Projectiles/Enemy_Straight_Projetile.prefab
-  artifactKey: Guid(9610b32634c0355409b4b5991571a66b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/Projectiles/Enemy_Straight_Projetile.prefab using Guid(9610b32634c0355409b4b5991571a66b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b2e58a73a411136a5cbeed251c43e896') in 0.0196112 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/Planets/Red-Lines-PLanet.prefab
-  artifactKey: Guid(284631a95d42dc047b90d8af25ac4457) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/Planets/Red-Lines-PLanet.prefab using Guid(284631a95d42dc047b90d8af25ac4457) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8e5f199ffaad7884d857396a54aa8546') in 0.0176006 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_5.prefab
-  artifactKey: Guid(e64040bc8d8b82c45a9297ac9699e081) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/EnemyWaves/Wave_5.prefab using Guid(e64040bc8d8b82c45a9297ac9699e081) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '34eb42a77dd36c5aac22a870b81a4d23') in 0.0129799 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Script/Score/ResetManager.cs
-  artifactKey: Guid(6fc66b046c1cb9941b3c8b8d033144e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Score/ResetManager.cs using Guid(6fc66b046c1cb9941b3c8b8d033144e6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '61ab22894886f530c0f1d58b005dd01c') in 0.0098873 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph
-  artifactKey: Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph using Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e638a8d3fe50712afb4f2f5d5335ee8c') in 0.0127922 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/Projectiles/Player_Short_Lazer.prefab
-  artifactKey: Guid(7120694aa5e8a9d4a88b1e61228dabb0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/Projectiles/Player_Short_Lazer.prefab using Guid(7120694aa5e8a9d4a88b1e61228dabb0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'de357c170554743ae7bb1598240d8e89') in 0.021499 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Background/Nebula_1_1_Bottom.png
-  artifactKey: Guid(6b10284ebe4e52e489cf7bd6c3aa5dfc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Background/Nebula_1_1_Bottom.png using Guid(6b10284ebe4e52e489cf7bd6c3aa5dfc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd3122917b82d4dbbf5597c78cd476003') in 0.0456606 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl
-  artifactKey: Guid(96de908384869cd409c75efa351d5edf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl using Guid(96de908384869cd409c75efa351d5edf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e3abcfabbd04bc2046cb027b18428d52') in 0.0124636 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Background/Stars-Big_1_1_PC.png
-  artifactKey: Guid(ad19dfeb33b50d849a1ef7ccd5ef79fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Background/Stars-Big_1_1_PC.png using Guid(ad19dfeb33b50d849a1ef7ccd5ef79fd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter)d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 67108864.
- -> (artifact id: '19a0b556ecc27657f17c86f8dbab6c3f') in 0.0855432 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Script/Enemy/EnemyHealthSystem.cs
-  artifactKey: Guid(1b4b8d40182d58341aa8190ed7294ab6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Enemy/EnemyHealthSystem.cs using Guid(1b4b8d40182d58341aa8190ed7294ab6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7e5171f5084519d54afae53059af537e') in 0.0142856 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Script/PowerUp/PowerUpPlayer.cs
-  artifactKey: Guid(8097952d419db4c4baa64c990835fb56) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/PowerUp/PowerUpPlayer.cs using Guid(8097952d419db4c4baa64c990835fb56) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f5c146c7b93b25b669bc60fe8dd8d126') in 0.0155194 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_01.mat
-  artifactKey: Guid(3b922b76b9ea81d4cbd9207035208b52) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_01.mat using Guid(3b922b76b9ea81d4cbd9207035208b52) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fe853b8f4f506f0214373b907016e2df') in 0.0299094 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
-  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cf407d349d4b15b9ca79d7ff86903278') in 0.0336303 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Basic.mat
-  artifactKey: Guid(1f665717674355d489e01624ad09c1cf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Basic.mat using Guid(1f665717674355d489e01624ad09c1cf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '60e6a85af21c4f5d9ece5e870af6ce6c') in 0.0167032 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Enemy Hit Effect/Enemy Hit Effect_01.png
-  artifactKey: Guid(cb18f36e5bca12e498f2de877e9ffff0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Enemy Hit Effect/Enemy Hit Effect_01.png using Guid(cb18f36e5bca12e498f2de877e9ffff0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '74d75ed85c7530aa333415027b2485c2') in 0.0227673 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect.png
-  artifactKey: Guid(99a711709045c58409b66e71ee2b3e1a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect.png using Guid(99a711709045c58409b66e71ee2b3e1a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd7d18e03e86c44d502a54b5d6908a4ac') in 0.0234324 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Enemy Hit Effect/Enemy Hit Effect_02.png
-  artifactKey: Guid(41a056b1e3cb7794dbcc44338c61bbd8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Enemy Hit Effect/Enemy Hit Effect_02.png using Guid(41a056b1e3cb7794dbcc44338c61bbd8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '003ef07b69c5d89c12ec55e2f4a6368a') in 0.0233102 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_01.png
-  artifactKey: Guid(edb28dfa5e6c8e94f96425acab8c8318) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_01.png using Guid(edb28dfa5e6c8e94f96425acab8c8318) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'eb94e2f8b58cedc1feb501c665587d2d') in 0.0241333 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
-  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6800d2564aec0ad66c56c40717eda4f5') in 0.0690648 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Script/PowerUp/PowerUpMovement.cs
-  artifactKey: Guid(a5e41ff8aed20464088c04c6479c3dc8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/PowerUp/PowerUpMovement.cs using Guid(a5e41ff8aed20464088c04c6479c3dc8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1e089121336a874daf26c998016848b9') in 0.0117303 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Script/Bullet/Damageable.cs
-  artifactKey: Guid(69e16e7c644afd544b0b0147a3b67925) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/Damageable.cs using Guid(69e16e7c644afd544b0b0147a3b67925) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4dbe2ccd12b78eea6c95cea2a07a0d79') in 0.0126389 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Script/Player/Player.cs
-  artifactKey: Guid(7814760bfb0c75c45876cf7fb6737427) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Player/Player.cs using Guid(7814760bfb0c75c45876cf7fb6737427) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6e696383b3d889cc9c04d35c96685fc3') in 0.010961 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Script/Enemy/WaveSpawnController.cs
-  artifactKey: Guid(3e637950fc7548549b059e0d8d24316e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Enemy/WaveSpawnController.cs using Guid(3e637950fc7548549b059e0d8d24316e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7d288374f2a0987dc1548d81f0f4eeb4') in 0.0126643 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/Game_Controller.prefab
-  artifactKey: Guid(01cf4a33fc66cde4abc060ccfeadeb5a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/Game_Controller.prefab using Guid(01cf4a33fc66cde4abc060ccfeadeb5a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bbe4f953c893572c14b7f56c18d50c89') in 0.0195015 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Parts_01.png
-  artifactKey: Guid(249f6ebbdacd4b44999b6f2f2a7b92ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Parts_01.png using Guid(249f6ebbdacd4b44999b6f2f2a7b92ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5801d4e91ce77fa72ba87ebedba05c90') in 0.0182293 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Scenes/GamePlay.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scenes/GamePlay.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5cb072be693840ae6615237ee80ebf8e') in 0.0140582 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt
-  artifactKey: Guid(381dcb09d5029d14897e55f98031fca5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt using Guid(381dcb09d5029d14897e55f98031fca5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e3cd1f79718f4f697802429e1ad84984') in 0.013962 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect_Sphere.png
-  artifactKey: Guid(e3bcfb1e47421ab4786c4ad4a7965935) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Engines/Engine_01_Effect_Sphere.png using Guid(e3bcfb1e47421ab4786c4ad4a7965935) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '90b4cf1b44c8407d4f7bed77b697fbb8') in 0.0184178 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Weapons/Machine Gun.png
-  artifactKey: Guid(78f02d1cbc537d4488578b7b68f34f68) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Weapons/Machine Gun.png using Guid(78f02d1cbc537d4488578b7b68f34f68) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c66f7f4fea008922eca6b4651743c18d') in 0.0176118 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
-  artifactKey: Guid(c8d12adcee749c344b8117cf7c7eb912) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader using Guid(c8d12adcee749c344b8117cf7c7eb912) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9480affef2f94e8f3c592d17de8e4545') in 0.0149185 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/GameAssets/Sprites/LosePanel/lose.jpg
-  artifactKey: Guid(7b3d659481130fa4896584869840056d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/GameAssets/Sprites/LosePanel/lose.jpg using Guid(7b3d659481130fa4896584869840056d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f871c2a293478ceaa440c3800d0b8b9e') in 0.0211012 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_02.mat
-  artifactKey: Guid(f7601e72adf5e7b4eabb731425d0b998) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_02.mat using Guid(f7601e72adf5e7b4eabb731425d0b998) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a582f0f6e9445bd39012980a51ca9bdf') in 0.0165281 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph
-  artifactKey: Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph using Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c3529918df4453965177ebc8515f6515') in 0.0122726 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/GameAssets/Sprites/BackGround/Nebula_1_1_Top.png
-  artifactKey: Guid(d33bd83fb7d81d243bd5ddb304163736) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/GameAssets/Sprites/BackGround/Nebula_1_1_Top.png using Guid(d33bd83fb7d81d243bd5ddb304163736) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '26fc019155a3f98ef15083786c10aec5') in 0.0209414 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_02.png
-  artifactKey: Guid(4597cc4489ac8ac4dbcca786dd7babd3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_02.png using Guid(4597cc4489ac8ac4dbcca786dd7babd3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '779d94f45196140e616bbf27b69c3f69') in 0.0248592 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_02_PC.mat
-  artifactKey: Guid(b7501b71cacf94e468954ef16fba6b47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Small Explosion_01_Smoke_02_PC.mat using Guid(b7501b71cacf94e468954ef16fba6b47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e14c751d8421ad77b295ad11e6f87de2') in 0.01867 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Script/Bullet/NormalBulletBehaviour.cs
-  artifactKey: Guid(215d1c6916daf934b94ec372bad55010) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/NormalBulletBehaviour.cs using Guid(215d1c6916daf934b94ec372bad55010) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0ce724b75c498be23527d7ffe3a049cf') in 0.01179 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000118 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
-  artifactKey: Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_Sprite.shader using Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'baf5c00c916741385f233ce154d142ad') in 0.0137782 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Power Ups/Power Up Ring.png
-  artifactKey: Guid(835076da6ec98744ba881e9b3b379043) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Power Ups/Power Up Ring.png using Guid(835076da6ec98744ba881e9b3b379043) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4790111d9595cc3e7c162d1176cf37f5') in 0.0249948 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
-  artifactKey: Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader using Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6c248aa542c2c59559edd438018fc83a') in 0.0150436 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Script/Base/CharacterHealthSystem.cs
-  artifactKey: Guid(43ebbaa93225f664f965e10ea27b3a3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Base/CharacterHealthSystem.cs using Guid(43ebbaa93225f664f965e10ea27b3a3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bb88b5862f3445a1157afa5b94e18fe6') in 0.0138048 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/Prefab/Enemy.prefab
-  artifactKey: Guid(49bd36293a04cd44bb96aa0c45b8482d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Prefab/Enemy.prefab using Guid(49bd36293a04cd44bb96aa0c45b8482d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '641bd12e4eccafa0e2dd6691b4670bac') in 0.0194031 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Planets/blue-planet.png
-  artifactKey: Guid(4824fa28ba58074488d725843f545f35) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Planets/blue-planet.png using Guid(4824fa28ba58074488d725843f545f35) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '886c72b1205f1c01b78197fe1700aa53') in 0.0231501 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Prefab/PowerUpDrone.prefab
-  artifactKey: Guid(c1ece10091eb767499aa21b351131ce0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Prefab/PowerUpDrone.prefab using Guid(c1ece10091eb767499aa21b351131ce0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '707b63d99e5671f72b28ea982b1110bb') in 0.0212768 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/GameData/NormalBulletData.asset
-  artifactKey: Guid(9508fe4071d053e47ab1b694bd15f83f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/GameData/NormalBulletData.asset using Guid(9508fe4071d053e47ab1b694bd15f83f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'eef0122d18b75bef601aaa110595a268') in 0.0170876 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Background/Stars-Big_1_1.png
-  artifactKey: Guid(7a583abac50037a4d8ec44a3f8e906c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Background/Stars-Big_1_1.png using Guid(7a583abac50037a4d8ec44a3f8e906c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bea1ce7bb0f1b33ce3e0e773805a139b') in 0.0249243 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Rocket_Explosion_PC.mat
-  artifactKey: Guid(c5f32ff56f29725449fe5d45a157ff79) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Explosions/Rocket_Explosion_PC.mat using Guid(c5f32ff56f29725449fe5d45a157ff79) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fdfd709ddc9a3c475c6e9ae3090e52f7') in 0.0127895 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
-  artifactKey: Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader using Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '92b6d9f59982b5e8872c62aa804d2031') in 0.0148817 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Script/Player/PlayerData.cs
-  artifactKey: Guid(64eb8b49f3e2a7847a2db7ba33b400c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Player/PlayerData.cs using Guid(64eb8b49f3e2a7847a2db7ba33b400c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ed34ad72d2cf98b4dbd910409d71eab7') in 0.0121693 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/VFX/Speed Effect.prefab
-  artifactKey: Guid(02c317ecc4c3a484d980337358151369) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/VFX/Speed Effect.prefab using Guid(02c317ecc4c3a484d980337358151369) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd9989b473dbb9ddc7f58f7e188d083db') in 0.0830214 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
-  artifactKey: Guid(128e987d567d4e2c824d754223b3f3b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader using Guid(128e987d567d4e2c824d754223b3f3b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3aff506484d77629442c7c0ef0a3983b') in 0.0137858 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
-  artifactKey: Guid(fade42e8bc714b018fac513c043d323b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt using Guid(fade42e8bc714b018fac513c043d323b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7d6f06804fee88e58931abeb4ba14389') in 0.0119443 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Space Shooter Template FREE/Prefabs/VFX/Muzzle FX.prefab
-  artifactKey: Guid(9abeea789432c024ba3fbf0cd8669087) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Prefabs/VFX/Muzzle FX.prefab using Guid(9abeea789432c024ba3fbf0cd8669087) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '89fc784853ac506c8d7b20b6aa714557') in 0.0323613 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Background/Nebula_1_1_Top.png
-  artifactKey: Guid(1cbe86da37c239742acb602c572d81c7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Background/Nebula_1_1_Top.png using Guid(1cbe86da37c239742acb602c572d81c7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bcc250b7a2de11cb110a78a2af3c5bfd') in 0.0201715 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/Enemies/Enemy_01.png
-  artifactKey: Guid(3c6d6674bfcb5ac498628dff731a28f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/Enemies/Enemy_01.png using Guid(3c6d6674bfcb5ac498628dff731a28f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4e1a802494f860f4bb86c4ac799eb47e') in 0.0197854 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Script/Bullet/HomingBulletBehaviour.cs
-  artifactKey: Guid(f63db3b0c6d025c4eac767b47a083837) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Bullet/HomingBulletBehaviour.cs using Guid(f63db3b0c6d025c4eac767b47a083837) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '87e7a574f2439d0bfd68fde7abad2b34') in 0.0122011 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Space Shooter Template FREE/Sprites/VFX/Enemy Hit Effect/Enemy Hit Effect_02.mat
-  artifactKey: Guid(d04f84f6225592f4e9b17dc230366ffb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Space Shooter Template FREE/Sprites/VFX/Enemy Hit Effect/Enemy Hit Effect_02.mat using Guid(d04f84f6225592f4e9b17dc230366ffb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e590a994398fce0ac5b1e830d231a7d7') in 0.0150977 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Script/Enemy/Enemy.cs
-  artifactKey: Guid(e7af0fcdc9d3fe348b88f3e54a682201) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Enemy/Enemy.cs using Guid(e7af0fcdc9d3fe348b88f3e54a682201) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '335976c00cab6ffb2b6d253a04abf029') in 0.0123458 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/TextMesh Pro/Sprites/EmojiOne.png
-  artifactKey: Guid(dffef66376be4fa480fb02b19edbe903) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/TextMesh Pro/Sprites/EmojiOne.png using Guid(dffef66376be4fa480fb02b19edbe903) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '63218092aae2995239049dcf679bc3af') in 0.0195974 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Script/Score/ScoreManager.cs
-  artifactKey: Guid(21836396f7daf7b4db688acf0e3b97c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Script/Score/ScoreManager.cs using Guid(21836396f7daf7b4db688acf0e3b97c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '285ff3e56903a1a856ef38f4c8c2c3e3') in 0.0141057 seconds
+  path: Assets/Script/LoseWinSystem/LoseManager.cs
+  artifactKey: Guid(2e1395271e2dff148b15acd08d91a7e7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Script/LoseWinSystem/LoseManager.cs using Guid(2e1395271e2dff148b15acd08d91a7e7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c5cd4829199d1251a1e0a21db70d216a') in 0.0107996 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
