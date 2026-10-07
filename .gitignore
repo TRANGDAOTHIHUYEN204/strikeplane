@@ -1,15 +1,9 @@
-# Unity generated files
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
+
 Library/
 Temp/
 Build/
-[Ll]ogs/
+Logs/
+
 *.csproj
 *.sln
 *.slnx
@@ -22,5 +16,5 @@ UserSettings/EditorUserSettings.asset
 !Assets/ImportantFile.csproj
 .vs/
 
-# Unity Editor user settings
+
 UserSettings/

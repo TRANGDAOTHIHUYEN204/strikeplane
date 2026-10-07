@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerMovement2D : MonoBehaviour
 {
@@ -7,25 +6,35 @@ public class PlayerMovement2D : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Vector2 movement;
 
-    //private ScreenBoudaries _screenBoudaries;
     private Vector2 targetPos;
     private bool hasTarget;
     private Camera _cam;
-
+    private Vector2 _startPos;
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _cam = Camera.main;
+        _startPos = transform.position;
     }
+
     private void Update()
     {
+        if (VirtualJoystick.IsHeld)
+        {
+            hasTarget = false;
+            movement = VirtualJoystick.Direction;
+            return;
+        }
+
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
+
         if (Input.GetMouseButton(0))
         {
             hasTarget = true;
             targetPos = _cam.ScreenToWorldPoint(Input.mousePosition);
         }
+
         if (inputX != 0)
         {
             hasTarget = false;
@@ -54,6 +63,7 @@ public class PlayerMovement2D : MonoBehaviour
             movement = Vector2.zero;
         }
     }
+
     private void FixedUpdate()
     {
         if (LoseManager.isGameOver) return;
@@ -67,5 +77,12 @@ public class PlayerMovement2D : MonoBehaviour
         newPos.x = Mathf.Clamp(newPos.x, ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
         newPos.y = Mathf.Clamp(newPos.y, ScreenBoudaries.MinY, ScreenBoudaries.MaxY);
         _rigidbody2D.MovePosition(newPos);
+    }
+    public void ResetMovement()
+    {
+        movement = Vector2.zero;
+        hasTarget = false;
+        _rigidbody2D.position = _startPos;
+        transform.position = _startPos;
     }
 }

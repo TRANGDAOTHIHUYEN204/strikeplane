@@ -12,7 +12,6 @@ public class Player : Damageable
     {
         _characterHealthSystem = new PlayerHealthSystem(_characterData.MaxHp);
         _characterHealthSystem.DieAction += Die;
-        _characterHealthSystem.DieAction += Die;
     }
     public override void TakeDamage(int damage) => _characterHealthSystem.TakeDamage(damage);
     public void Heal(int amount) => _characterHealthSystem.Heal(amount);

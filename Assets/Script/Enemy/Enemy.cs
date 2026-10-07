@@ -21,6 +21,7 @@ public class Enemy : Damageable
     {
         _enemyData = _characterData;
         _characterHealthSystem = new EnemyHealthSystem(_characterData.MaxHp);
+        _characterHealthSystem.DieAction -= OnDie;
         _characterHealthSystem.DieAction += OnDie;
         gameObject.SetActive(true);
         _enemyMovement.Init(this, _characterData.SpeedMove);

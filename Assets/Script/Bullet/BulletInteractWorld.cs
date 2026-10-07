@@ -32,7 +32,10 @@ public class BulletInteractWorld
         foreach (Collider2D target in hits)
         {
             if (!target.TryGetComponent(out Damageable targetDamage))
-                targetDamage.TakeDamage(damage);
+            {
+                continue;
+            }
+            targetDamage.TakeDamage(damage);
         }
     }
 }
