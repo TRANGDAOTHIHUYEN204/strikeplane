@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+// nợ kỹ thuật phần giới hạn di chuyển
 public class ScreenBoudaries : MonoBehaviour
 {
     public static float MinX { get; private set; }
