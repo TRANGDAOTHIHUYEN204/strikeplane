@@ -1,8 +1,15 @@
-
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
 Library/
 Temp/
 Build/
-
+[Ll]ogs/
 *.csproj
 *.sln
 *.slnx
