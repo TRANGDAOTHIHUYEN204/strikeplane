@@ -1,16 +1,20 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+
+
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private BulletFactory _bulletFactory;
     [SerializeField] private BulletDataBase _bulletDataBase;
     [SerializeField] private Transform playerPoint;
     [SerializeField] private SpawnEnemy _spawnEnemy;
+    private int _currentLine = 1;
+    private int _maxLine = 3;
     private IReadOnlyList<Enemy> _enemyActive => _spawnEnemy._enemyActive;
     private Coroutine _shootCoroutine;
     private Coroutine _powerUpCoroutine;
-    
+
 
     private void Awake()
     {
@@ -27,6 +31,20 @@ public class PlayerShoot : MonoBehaviour
             return;
         }
 
+
+    }
+    private void AddShootLine(int countLine)
+    {
+        float spacing = 0.5f;
+
+        for (int i = 0; i < countLine; i++)
+        {
+            float offset = (i - (countLine - 1) / 2f) * spacing;
+
+            Vector2 spawnPosition = (Vector2)playerPoint.position + Vector2.right * offset;
+
+            _bulletFactory.CreateBullet( _bulletDataBase,spawnPosition,Vector2.up);
+        }
     }
     public void ResetBulletPlayer() => _bulletFactory.ResetBullet();
     void OnEnable()
@@ -34,6 +52,17 @@ public class PlayerShoot : MonoBehaviour
         PowerUpPlayer.OnPowerUpCollected += ChangeBulletDataBase;
         _shootCoroutine = StartCoroutine(DelayShoot());
     }
+    public int AddLine()
+    {
+        if (_currentLine >= _maxLine)
+        {
+            return _maxLine;
+
+        }
+         return ++_currentLine;
+        
+    }
+
     private IEnumerator DelayShoot()
     {
         while (true)
@@ -46,8 +75,8 @@ public class PlayerShoot : MonoBehaviour
             
                 if (CanShoot())
                 {
-                    _bulletFactory.CreateBullet(_bulletDataBase, playerPoint.position, Vector2.up);
-                    yield return new WaitForSeconds(0.3f);
+                AddShootLine(_currentLine);
+                yield return new WaitForSeconds(0.3f);
                 }
                 else
                 {
@@ -88,6 +117,8 @@ public class PlayerShoot : MonoBehaviour
     }
     public void ChangeBulletDataBase(BulletDataBase bulletDataBase, float duration)
     {
+        if (bulletDataBase.AddLine)
+            AddLine();
         if (_powerUpCoroutine != null)
         {
             StopCoroutine(_powerUpCoroutine);
@@ -101,6 +132,7 @@ public class PlayerShoot : MonoBehaviour
         _bulletDataBase = powerUpData;
         yield return new WaitForSeconds(duration);
         _bulletDataBase = originalBulletData;
+        _currentLine = 1;
         _powerUpCoroutine = null;
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9158055063457516096}
   - component: {fileID: 4991303800108762029}
   - component: {fileID: -2984400830479138536}
+  - component: {fileID: 4398617644773374743}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -192,3 +193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c4f8069a059ae4abfe2f91498f3de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
+--- !u!114 &4398617644773374743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481422406715617852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269c8eed5c2277a4cbdcbfc92eecff59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyShoot
+  _bulletDataBase: {fileID: 11400000, guid: 6b1c5f4856db33f45ac35183809a7e19, type: 2}
+  timeSpawnBulletEnemy: 4.5
+  _shootRange: 4.5

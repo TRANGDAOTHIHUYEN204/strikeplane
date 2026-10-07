@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Enemy : Damageable
@@ -12,12 +11,15 @@ public class Enemy : Damageable
     public int AttackSpeed => _enemyData.AttackSpeed;
     public int DamageInteract => _enemyData.DamageInteract;
     public float ScoreEnemy => _enemyData.ScoreBaseEnemy;
+    private EnemyShoot _enemyShoot;
+    private UIManager _uiManager;
 
     private void Awake()
     {
         _enemyMovement = GetComponent<EnemyMovement>();
+        _enemyShoot = GetComponent<EnemyShoot>();
     }
-    public void Initiated(EnemyData _characterData)
+    public void Initiated(EnemyData _characterData, BulletFactory bulletFactory, BulletDataBase bulletDataBase, UIManager uiManager)
     {
         _enemyData = _characterData;
         _characterHealthSystem = new EnemyHealthSystem(_characterData.MaxHp);
@@ -25,7 +27,8 @@ public class Enemy : Damageable
         _characterHealthSystem.DieAction += OnDie;
         gameObject.SetActive(true);
         _enemyMovement.Init(this, _characterData.SpeedMove);
-
+        _enemyShoot.Init(bulletFactory);
+        _uiManager = uiManager;
     }
     private bool isReady()
     {
@@ -41,6 +44,7 @@ public class Enemy : Damageable
     {
         if (!isReady()) return;
         _characterHealthSystem?.TakeDamage(damage);
+        _uiManager.ShowDamageText(damage, Position);
     }
     public void Heal(int amount) => _characterHealthSystem.Heal(amount);
     public void SetPool(FactoryEnemy enemyPool)

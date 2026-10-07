@@ -4,6 +4,7 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _loseGameCanvas;
     private ResetManager _resetManager;
+
     private void Awake()
     {
         _resetManager = GetComponent<ResetManager>();
@@ -13,4 +14,5 @@ public class MenuManager : MonoBehaviour
         _loseGameCanvas.SetActive(false);
         _resetManager.ResetGame();
     }
+    
 }

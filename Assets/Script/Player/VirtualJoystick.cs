@@ -18,8 +18,7 @@ public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler,
 
     public void OnDrag(PointerEventData e)
     {
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            background, e.position, e.pressEventCamera, out Vector2 local);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle( background, e.position, e.pressEventCamera, out Vector2 local);
         local = Vector2.ClampMagnitude(local, radius);
         handle.anchoredPosition = local;
         Direction = local / radius;

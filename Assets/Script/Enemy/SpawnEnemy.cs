@@ -6,7 +6,9 @@ public class SpawnEnemy : MonoBehaviour
     private FactoryEnemy _factoryEnemy;
     public IReadOnlyList<Enemy> _enemyActive => _factoryEnemy.EnemyActive;
     private const float _spawnOffet = 2f;
-    
+    [SerializeField] private BulletFactory _bulletFactoryEnemy;
+    [SerializeField] private BulletDataBase _bulletEnemyDataBase;
+    [SerializeField] private UIManager _uiManager;
     private void Awake()
     {
         _factoryEnemy = new FactoryEnemy();
@@ -19,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour
             return null;
         }
         Enemy currentEnemy = _factoryEnemy.CreateEntity(enemyPrefab, PositionSpawnEnemy());
-        currentEnemy.Initiated(enemyData);
+        currentEnemy.Initiated(enemyData, _bulletFactoryEnemy, _bulletEnemyDataBase, _uiManager);
         _factoryEnemy.Active(currentEnemy);
         return currentEnemy;
      }

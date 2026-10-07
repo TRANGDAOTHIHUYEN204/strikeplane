@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum BulletType
@@ -9,6 +8,7 @@ public enum BulletType
     Explosive,
     HomingBullet
 }
+
 [CreateAssetMenu(fileName = "BulletData", menuName = "BulletBase", order = 3)]
 public class BulletDataBase : ScriptableObject
 {
@@ -18,7 +18,7 @@ public class BulletDataBase : ScriptableObject
     [SerializeField] private float _lifeTime;
     [SerializeField] private float _speedMove;
     [SerializeField] private Sprite _powerUpIcon;
-
+    [SerializeField] private bool _addLine;
     public int Damage
     {
         get {  return _damage; }
@@ -37,4 +37,5 @@ public class BulletDataBase : ScriptableObject
     public float LifeTime => _lifeTime;
     public float SpeedMove => _speedMove;
     public Sprite PowerUpIcon => _powerUpIcon;
+    public bool AddLine => _addLine;
 }

@@ -9,10 +9,10 @@ public class Bullet : MonoBehaviour
     private BulletInformation infor;
     private BulletInteractWorld _bulletInteractWorld;
     private BulletFactory _bulletFactory;
-
     public float timeLifeCycle;
     public LayerMask TargetLayer => _bulletDataBase.LayerTarget;
 
+    public bool hasAddLine => _bulletDataBase.AddLine;
     public void Init(BulletDataBase bulletDataBase, BulletFactory bulletFactory, Vector2 pos, Vector2 direction)
     {
         _bulletFactory = bulletFactory;
@@ -29,7 +29,6 @@ public class Bullet : MonoBehaviour
         infor.currentTarget = null;
         infor.speed = _bulletDataBase.SpeedMove;
         infor.damage = _bulletDataBase.Damage;
-
         transform.position = pos;
         timeLifeCycle = bulletDataBase.LifeTime;
         _bulletBehaviour = CreateBulletBehaviour(bulletDataBase.TypeBullet);
@@ -57,6 +56,7 @@ public class Bullet : MonoBehaviour
             infor.currentTarget = target;
             if (_bulletBehaviour.OnHit(infor))
             {
+
                 Despawn();
             }
 

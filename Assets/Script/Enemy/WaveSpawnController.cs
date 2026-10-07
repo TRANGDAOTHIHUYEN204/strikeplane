@@ -14,6 +14,7 @@ public class WaveSpawnController : MonoBehaviour
     private float _currentTime;
     [SerializeField] private LoseManager _loseManager;
     private Coroutine _winCoroutine;
+    
     private void Awake()
     {
         _spawnEnemy = GetComponent<SpawnEnemy>();
@@ -44,9 +45,11 @@ public class WaveSpawnController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        while (FindObjectsByType<Enemy>(FindObjectsSortMode.None).Length > 0)
+        while (_spawnEnemy._enemyActive.Count > 0)
+        {
+            if (LoseManager.isGameOver) yield break;
             yield return new WaitForSeconds(0.5f);
-
+        }
         if (!LoseManager.isGameOver)
             ShowWin();
     }
