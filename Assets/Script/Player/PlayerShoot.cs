@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] private BulletFactory _bulletFactory;
     [SerializeField] private BulletDataBase _bulletDataBase;
     [SerializeField] private Transform playerPoint;
     [SerializeField] private SpawnEnemy _spawnEnemy;
@@ -14,25 +13,9 @@ public class PlayerShoot : MonoBehaviour
     private IReadOnlyList<Enemy> _enemyActive => _spawnEnemy._enemyActive;
     private Coroutine _shootCoroutine;
     private Coroutine _powerUpCoroutine;
-
-
-    private void Awake()
-    {
-        if (_bulletDataBase == null)
-        {
-            Debug.LogError("BulletDataBase is missed in PlayerShoot");
-            enabled = false;
-            return;
-        }
-        if (_bulletFactory == null)
-        {
-            Debug.LogError("BulletFactory is missed in PlayerShoot");
-            enabled = false;
-            return;
-        }
-
-
-    }
+    [SerializeField] private BulletFactory bulletFactory;
+    
+    
     private void AddShootLine(int countLine)
     {
         float spacing = 0.5f;
@@ -43,10 +26,10 @@ public class PlayerShoot : MonoBehaviour
 
             Vector2 spawnPosition = (Vector2)playerPoint.position + Vector2.right * offset;
 
-            _bulletFactory.CreateBullet( _bulletDataBase,spawnPosition,Vector2.up);
+            bulletFactory.CreateBullet( _bulletDataBase,spawnPosition,Vector2.up);
         }
     }
-    public void ResetBulletPlayer() => _bulletFactory.ResetBullet();
+    public void ResetBulletPlayer() => bulletFactory.ResetBullet();
     void OnEnable()
     {
         PowerUpPlayer.OnPowerUpCollected += ChangeBulletDataBase;
@@ -60,9 +43,8 @@ public class PlayerShoot : MonoBehaviour
 
         }
          return ++_currentLine;
-        
     }
-
+    
     private IEnumerator DelayShoot()
     {
         while (true)
@@ -82,9 +64,7 @@ public class PlayerShoot : MonoBehaviour
                 {
                     yield return null;
                 }
-            
         }
-
     }
     private bool CanShoot()
     {

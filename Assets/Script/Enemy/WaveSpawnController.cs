@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WaveSpawnController : MonoBehaviour
 {
-    private SpawnEnemy _spawnEnemy;
+    [SerializeField] private SpawnEnemy _spawnEnemy;
     [SerializeField] private int _spawnCount;
 
     [SerializeField] private EnemyData _enemyData;
@@ -15,16 +15,7 @@ public class WaveSpawnController : MonoBehaviour
     [SerializeField] private LoseManager _loseManager;
     private Coroutine _winCoroutine;
     
-    private void Awake()
-    {
-        _spawnEnemy = GetComponent<SpawnEnemy>();
-        if ( _spawnEnemy == null)
-        {
-            Debug.LogError("SpawnEnemy is missed in WaveSpawnController");
-            enabled = false;
-            
-        }
-    }
+
     private void Start()
     {
         ScoreManager.Instance.SetTotalKill(_spawnCount);

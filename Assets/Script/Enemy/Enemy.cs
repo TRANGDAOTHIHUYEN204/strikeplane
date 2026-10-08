@@ -5,29 +5,24 @@ public class Enemy : Damageable
     private CharacterHealthSystem _characterHealthSystem;
     private EnemyData _enemyData;
     private FactoryEnemy _enemyPool;
-    private EnemyMovement _enemyMovement;
+    [SerializeField] private EnemyMovement enemyMovement;
     public int CurrentHp => _characterHealthSystem.CurrentHp;
     public bool IsDead => _characterHealthSystem.IsDead;
     public int AttackSpeed => _enemyData.AttackSpeed;
     public int DamageInteract => _enemyData.DamageInteract;
     public float ScoreEnemy => _enemyData.ScoreBaseEnemy;
-    private EnemyShoot _enemyShoot;
+    [SerializeField] private EnemyShoot enemyShoot;
     private UIManager _uiManager;
-
-    private void Awake()
+    
+    public void Initiated(EnemyData characterData, BulletFactory bulletFactory, BulletDataBase bulletDataBase, UIManager uiManager, ScreenBoudaries screenBoudaries)
     {
-        _enemyMovement = GetComponent<EnemyMovement>();
-        _enemyShoot = GetComponent<EnemyShoot>();
-    }
-    public void Initiated(EnemyData _characterData, BulletFactory bulletFactory, BulletDataBase bulletDataBase, UIManager uiManager, ScreenBoudaries screenBoudaries)
-    {
-        _enemyData = _characterData;
-        _characterHealthSystem = new EnemyHealthSystem(_characterData.MaxHp);
+        _enemyData = characterData;
+        _characterHealthSystem = new EnemyHealthSystem(characterData.MaxHp);
         _characterHealthSystem.DieAction -= OnDie;
         _characterHealthSystem.DieAction += OnDie;
         gameObject.SetActive(true);
-        _enemyMovement.Init(this, _characterData.SpeedMove, screenBoudaries);
-        _enemyShoot.Init(bulletFactory);
+        enemyMovement.Init(this, characterData.SpeedMove, screenBoudaries);
+        enemyShoot.Init(bulletFactory);
         _uiManager = uiManager;
     }
     private bool isReady()
@@ -40,6 +35,12 @@ public class Enemy : Damageable
         }
         return true;
     }
+    
+    public void SetMove(MoveBase move, float duration)
+    {
+        enemyMovement.SetMove(move, duration);
+    }
+    
     public override void TakeDamage(int damage)
     {
         if (!isReady()) return;
@@ -62,4 +63,5 @@ public class Enemy : Damageable
     {
         _enemyPool.Release(this);
     }
+    
 }

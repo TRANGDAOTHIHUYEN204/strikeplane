@@ -17,15 +17,24 @@ public class SpawnEnemy : MonoBehaviour
 
     public Enemy SpawnEnemyWave(Enemy enemyPrefab, EnemyData enemyData)
     {
-        if (enemyPrefab == null )
-        {
-            return null;
-        }
-        Enemy currentEnemy = _factoryEnemy.CreateEntity(enemyPrefab, PositionSpawnEnemy());
+        return SpawnEnemyWave(enemyPrefab, enemyData, PositionSpawnEnemy());
+    }
+
+    public Enemy SpawnEnemyWave(Enemy enemyPrefab, EnemyData enemyData, Vector2 position)
+    {
+        if (enemyPrefab == null) return null;
+
+        Enemy currentEnemy = _factoryEnemy.CreateEntity(enemyPrefab, position);
         currentEnemy.Initiated(enemyData, _bulletFactoryEnemy, _bulletEnemyDataBase, _uiManager, _screenBoudaries);
         _factoryEnemy.Active(currentEnemy);
         return currentEnemy;
-     }
+    }
+
+    public Vector2 TopCenter(float offsetY = 0f)
+    {
+        float x = (_screenBoudaries.MinX + _screenBoudaries.MaxX) * 0.5f;
+        return new Vector2(x, _screenBoudaries.MaxY + _spawnOffet + offsetY);
+    }
 
     private Vector2 PositionSpawnEnemy()
     {

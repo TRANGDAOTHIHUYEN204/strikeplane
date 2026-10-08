@@ -9,7 +9,8 @@ public class ResetManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private PowerUpPlayerSpawn powerUpPlayerSpawn;
     [SerializeField] private PlayerMovement2D playerMovement2D;
-    [SerializeField] private BulletFactory bulletFactory;
+    [SerializeField] private PlayerShoot playerShoot;
+    [SerializeField] private BulletFactory bulletFactoryEnemy;
     
     public void ResetGame()
     {
@@ -18,8 +19,9 @@ public class ResetManager : MonoBehaviour
         scoreManager.ResetScore();
         player.ResetPlayer();
         powerUpPlayerSpawn.ResetPowerUpPlayer();
-        bulletFactory.ResetBullet();
+        playerShoot.ResetBulletPlayer();
         playerMovement2D.ResetMovement();
+        bulletFactoryEnemy.ResetBullet();
     }
 
 }
