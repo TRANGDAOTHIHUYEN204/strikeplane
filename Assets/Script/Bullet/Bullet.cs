@@ -6,29 +6,29 @@ public class Bullet : MonoBehaviour
     public int Damage => _bulletDataBase.Damage;
     private BulletBehaviour _bulletBehaviour;
 
-    private BulletInformation infor;
+    private BulletInformation _infor;
     private BulletInteractWorld _bulletInteractWorld;
     private BulletFactory _bulletFactory;
     public float timeLifeCycle;
     public LayerMask TargetLayer => _bulletDataBase.LayerTarget;
 
-    public bool hasAddLine => _bulletDataBase.AddLine;
+    public bool HasAddLine => _bulletDataBase.AddLine;
     public void Init(BulletDataBase bulletDataBase, BulletFactory bulletFactory, Vector2 pos, Vector2 direction)
     {
         _bulletFactory = bulletFactory;
         _bulletInteractWorld = new BulletInteractWorld();
-        infor = new BulletInformation();
+        _infor = new BulletInformation();
         _bulletDataBase = bulletDataBase;
 
-        infor.bullet = this;
-        infor.currentPos = pos;
-        infor.direction = direction;
-        infor.layerTarget = _bulletDataBase.LayerTarget;
-        infor.direction = direction;
-        infor.bulletAttackWorld = _bulletInteractWorld;
-        infor.currentTarget = null;
-        infor.speed = _bulletDataBase.SpeedMove;
-        infor.damage = _bulletDataBase.Damage;
+        _infor.bullet = this;
+        _infor.currentPos = pos;
+        _infor.direction = direction;
+        _infor.layerTarget = _bulletDataBase.LayerTarget;
+        _infor.direction = direction;
+        _infor.bulletAttackWorld = _bulletInteractWorld;
+        _infor.currentTarget = null;
+        _infor.speed = _bulletDataBase.SpeedMove;
+        _infor.damage = _bulletDataBase.Damage;
         transform.position = pos;
         timeLifeCycle = bulletDataBase.LifeTime;
         _bulletBehaviour = CreateBulletBehaviour(bulletDataBase.TypeBullet);
@@ -36,9 +36,9 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         if (_bulletBehaviour == null) return;
-        infor.deltaTime = Time.deltaTime;
-        _bulletBehaviour.Move(infor);
-        transform.position = infor.currentPos;
+        _infor.deltaTime = Time.deltaTime;
+        _bulletBehaviour.Move(_infor);
+        transform.position = _infor.currentPos;
         timeLifeCycle -= Time.deltaTime;
         if (timeLifeCycle <= 0f)
         {
@@ -53,10 +53,9 @@ public class Bullet : MonoBehaviour
         if (((1<< colliderTarget.gameObject.layer) & _bulletDataBase.LayerTarget.value) == 0) return;
         if (colliderTarget.TryGetComponent(out Damageable target))
         {
-            infor.currentTarget = target;
-            if (_bulletBehaviour.OnHit(infor))
+            _infor.currentTarget = target;
+            if (_bulletBehaviour.OnHit(_infor))
             {
-
                 Despawn();
             }
 

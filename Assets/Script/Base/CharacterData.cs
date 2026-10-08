@@ -3,20 +3,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewItemData", menuName = "CharacterData", order = 0)]
 public class CharacterData : ScriptableObject
 {
-    [SerializeField] private string _name;
-    [SerializeField] private int _maxHp;
+    [SerializeField] private string characterName;
+    [SerializeField] private int maxHp;
 
-    [SerializeField] private int _armor;
+    [SerializeField] private int armor;
 
-    public string Name => _name;
+    public string Name => characterName;
     public int MaxHp
     {
-        get { return _maxHp; }
-        set { _maxHp = Mathf.Max(1, value); }
+        get { return maxHp; }
+        private set { maxHp = Mathf.Max(1, value); }
     }
     public int Armor
     {
-        get { return _armor; }
-        set { _armor = Mathf.Max(0, value); }
+        get { return armor; }
+        private set { armor = Mathf.Max(0, value); }
     }
 }

@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _loseGameCanvas;
-    private ResetManager _resetManager;
+    [SerializeField] private GameObject loseGameCanvas;
+    [SerializeField] private GameObject winGameCanvas;
+    [SerializeField] private ResetManager resetManager;
 
-    private void Awake()
+
+    public void RePlayLoseGame() => Replay(loseGameCanvas);
+    public void RePlayWinGame()  => Replay(winGameCanvas);
+
+    private void Replay(GameObject canvas)
     {
-        _resetManager = GetComponent<ResetManager>();
+        canvas.SetActive(false);
+        resetManager.ResetGame();
     }
-    public void RePlay()
-    {
-        _loseGameCanvas.SetActive(false);
-        _resetManager.ResetGame();
-    }
-    
 }

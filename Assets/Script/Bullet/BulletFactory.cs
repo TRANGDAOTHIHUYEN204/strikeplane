@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BulletFactory : MonoBehaviour
 {
-    [SerializeField] private Bullet _bulletPrefab ;
+    [SerializeField] private Bullet bulletPrefab ;
     private Stack<Bullet> _bulletPool = new Stack<Bullet>();
     private List<Bullet> _bulletActive = new List<Bullet>();
     public Bullet CreateBullet(BulletDataBase bulletDatabase, Vector2 pos, Vector2 direction)
@@ -16,7 +16,7 @@ public class BulletFactory : MonoBehaviour
         }
         else
         {
-            bullet = Instantiate(_bulletPrefab);
+            bullet = Instantiate(bulletPrefab);
         }
         bullet.Init(bulletDatabase,this, pos, direction);
         _bulletActive.Add(bullet);

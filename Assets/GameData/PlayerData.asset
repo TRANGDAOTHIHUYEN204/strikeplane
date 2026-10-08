@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64eb8b49f3e2a7847a2db7ba33b400c3, type: 3}
+  m_Script: {fileID: 11500000, guid: c224bdd06d761144594261982cbd52d7, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  _name: 
-  _maxHp: 100
-  _armor: 0
+  maxHp: 100
+  armor: 50
+  dmg: 50

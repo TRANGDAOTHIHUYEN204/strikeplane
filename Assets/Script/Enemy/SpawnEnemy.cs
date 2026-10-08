@@ -9,6 +9,7 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private BulletFactory _bulletFactoryEnemy;
     [SerializeField] private BulletDataBase _bulletEnemyDataBase;
     [SerializeField] private UIManager _uiManager;
+    [SerializeField] private ScreenBoudaries _screenBoudaries;
     private void Awake()
     {
         _factoryEnemy = new FactoryEnemy();
@@ -21,15 +22,15 @@ public class SpawnEnemy : MonoBehaviour
             return null;
         }
         Enemy currentEnemy = _factoryEnemy.CreateEntity(enemyPrefab, PositionSpawnEnemy());
-        currentEnemy.Initiated(enemyData, _bulletFactoryEnemy, _bulletEnemyDataBase, _uiManager);
+        currentEnemy.Initiated(enemyData, _bulletFactoryEnemy, _bulletEnemyDataBase, _uiManager, _screenBoudaries);
         _factoryEnemy.Active(currentEnemy);
         return currentEnemy;
      }
 
     private Vector2 PositionSpawnEnemy()
     {
-        float x = Random.Range(ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
-        float y = ScreenBoudaries.MaxY + _spawnOffet;
+        float x = Random.Range(_screenBoudaries.MinX, _screenBoudaries.MaxX);
+        float y = _screenBoudaries.MaxY + _spawnOffet;
         return new Vector2(x, y); 
     }
     public void ResetEnemy() => _factoryEnemy.ResetEnemy();

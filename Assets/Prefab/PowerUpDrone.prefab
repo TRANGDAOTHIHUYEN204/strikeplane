@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8097952d419db4c4baa64c990835fb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpPlayer
+  spriteBullet: {fileID: 3798611670732228216}
+  powerUpMovement: {fileID: 646835794126537019}
 --- !u!61 &179721749768769141
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -27,7 +27,6 @@ public class EnemyShoot : MonoBehaviour
     {
         StopShooting();
     }
-
     public void StartShooting()
     {
         if (_bulletDataBase == null)

@@ -2,8 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 public class PlayerSpawn : MonoBehaviour
 {
-    [SerializeField] private Player _player;
-    private Vector2 pointSpawn;
+    [SerializeField] private Player player;
+    private Vector2 _pointSpawn;
 
     private Stack<Player> _playerPool = new Stack<Player>();
 
@@ -13,12 +13,12 @@ public class PlayerSpawn : MonoBehaviour
         if (_playerPool.Count > 0)
         {
             currentPlayer = _playerPool.Pop();
-            currentPlayer.transform.SetLocalPositionAndRotation(pointSpawn, Quaternion.identity);
+            currentPlayer.transform.SetLocalPositionAndRotation(_pointSpawn, Quaternion.identity);
 
         }
         else
         {
-            currentPlayer = Instantiate(_player, pointSpawn, Quaternion.identity);
+            currentPlayer = Instantiate(player, _pointSpawn, Quaternion.identity);
         }
         return currentPlayer;
     }

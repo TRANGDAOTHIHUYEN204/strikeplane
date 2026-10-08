@@ -9,18 +9,17 @@ public class PowerUpPlayer : MonoBehaviour
     private SpriteRenderer spriteBullet;
     private PowerUpPlayerSpawn _powerUpPlayerSpawn;
     private PowerUpMovement _powerUpMovement;
-
     private void Awake()
     {
         spriteBullet = GetComponent<SpriteRenderer>();
         _powerUpMovement = GetComponent<PowerUpMovement>();
     }
-    public void Init(BulletDataBase data, PowerUpPlayerSpawn spawn)
+    public void Init(BulletDataBase data, PowerUpPlayerSpawn spawn, ScreenBoudaries boudaries)
     {
         powerUpBulletData = data;
         _powerUpPlayerSpawn = spawn;
         spriteBullet.sprite = data.PowerUpIcon;
-        _powerUpMovement.Init(this, 2f);
+        _powerUpMovement.Init(this, 2f, boudaries);
     }
 
     private void OnTriggerEnter2D(Collider2D colliderTarget)

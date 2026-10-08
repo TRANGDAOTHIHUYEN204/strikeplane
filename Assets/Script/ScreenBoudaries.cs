@@ -1,25 +1,37 @@
 using UnityEngine;
 
-
-// nợ kỹ thuật phần giới hạn di chuyển
 public class ScreenBoudaries : MonoBehaviour
 {
-    public static float MinX { get; private set; }
-    public static float MaxX { get; private set; }
-    public static float MinY { get; private set; }
-    public static float MaxY { get; private set; }
-    [SerializeField] private float padding = 1f;
 
-    private void Awake()
+    [SerializeField] private SpriteRenderer backgroundSprite;
+    [SerializeField] private Vector2 padding = new Vector2(1.5f, 1.5f);
+    public float MinX { get; private set; }
+    public float MaxX { get; private set; }
+    public float MinY { get; private set; }
+    public float MaxY { get; private set; }
+
+    private void Awake() => UpdateBoundaries();
+
+    public void UpdateBoundaries()
     {
-        Camera camera = Camera.main;
-        float camHeight = camera.orthographicSize;
-        float camWidth = camHeight * camera.aspect;
-        Vector2 camPos = camera.transform.position;
+        if (backgroundSprite == null) return;
 
-        MinX = camPos.x - camWidth + padding;
-        MaxX = camPos.x + camWidth - padding;
-        MinY = camPos.y - camHeight + padding;
-        MaxY = camPos.y + camHeight - padding;
+        Bounds b = backgroundSprite.bounds;
+        MinX = b.min.x + padding.x;
+        MaxX = b.max.x - padding.x;
+        MinY = b.min.y + padding.y;
+        MaxY = b.max.y - padding.y;
+    }
+    
+    public Vector2 Clamp(Vector2 pos)
+    {
+        pos.x = Mathf.Clamp(pos.x, MinX, MaxX);
+        pos.y = Mathf.Clamp(pos.y, MinY, MaxY);
+        return pos;
+    }
+
+    public bool IsInside(Vector2 pos)
+    {
+        return pos.x >= MinX && pos.x <= MaxX && pos.y >= MinY && pos.y <= MaxY;
     }
 }

@@ -3,7 +3,7 @@ Library/
 Temp/
 Build/
 Logs/
-
+*.utmp/
 *.csproj
 *.sln
 *.slnx

@@ -8,6 +8,7 @@ public class PowerUpPlayerSpawn : MonoBehaviour
     private float _currentTime;
     private Stack<PowerUpPlayer> _powerUpPool = new Stack<PowerUpPlayer>();
     private List<PowerUpPlayer> _powerUpActive = new List<PowerUpPlayer>();
+    [SerializeField] private ScreenBoudaries _screenBoudaries;
     private void Update()
     {
         if (LoseManager.isGameOver) return;
@@ -37,7 +38,7 @@ public class PowerUpPlayerSpawn : MonoBehaviour
             currentPowerUpPlayer = Instantiate(_powerupPlayer, randomPosition, Quaternion.identity);
         }
 
-        currentPowerUpPlayer.Init(randomData, this);
+        currentPowerUpPlayer.Init(randomData, this, _screenBoudaries);
         _powerUpActive.Add(currentPowerUpPlayer);
         Debug.Log($"random : {randomData.name}");
     }
@@ -62,8 +63,8 @@ public class PowerUpPlayerSpawn : MonoBehaviour
     }
     private Vector2 GetRandomPosition()
     {
-        float x = Random.Range(ScreenBoudaries.MinX, ScreenBoudaries.MaxX);
-        float y = ScreenBoudaries.MaxY + 1f;
+        float x = Random.Range(_screenBoudaries.MinX, _screenBoudaries.MaxX);
+        float y = _screenBoudaries.MaxY + 1f;
 
         return new Vector2(x, y);
     }

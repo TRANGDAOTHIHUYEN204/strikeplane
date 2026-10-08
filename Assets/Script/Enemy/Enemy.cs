@@ -19,14 +19,14 @@ public class Enemy : Damageable
         _enemyMovement = GetComponent<EnemyMovement>();
         _enemyShoot = GetComponent<EnemyShoot>();
     }
-    public void Initiated(EnemyData _characterData, BulletFactory bulletFactory, BulletDataBase bulletDataBase, UIManager uiManager)
+    public void Initiated(EnemyData _characterData, BulletFactory bulletFactory, BulletDataBase bulletDataBase, UIManager uiManager, ScreenBoudaries screenBoudaries)
     {
         _enemyData = _characterData;
         _characterHealthSystem = new EnemyHealthSystem(_characterData.MaxHp);
         _characterHealthSystem.DieAction -= OnDie;
         _characterHealthSystem.DieAction += OnDie;
         gameObject.SetActive(true);
-        _enemyMovement.Init(this, _characterData.SpeedMove);
+        _enemyMovement.Init(this, _characterData.SpeedMove, screenBoudaries);
         _enemyShoot.Init(bulletFactory);
         _uiManager = uiManager;
     }

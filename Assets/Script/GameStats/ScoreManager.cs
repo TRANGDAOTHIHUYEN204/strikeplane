@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private float currentScore;
-    private float highScore;
-    private int countKill;
-    private int totalKill;
+    private float _currentScore;
+    private float _highScore;
+    private int _countKill;
+    private int _totalKill;
     private const string SCORE_KEY = "highScore";
 
     public static ScoreManager Instance { get; private set; }
@@ -28,8 +28,8 @@ public class ScoreManager : MonoBehaviour
     }
     private void Start()
     {
-        highScore = PlayerPrefs.GetFloat(SCORE_KEY, 0f);
-        currentScore = 0f;
+        _highScore = PlayerPrefs.GetFloat(SCORE_KEY, 0f);
+        _currentScore = 0f;
         ApplyScore();
         ApplyKill();
         ApplyHighScore();
@@ -37,12 +37,12 @@ public class ScoreManager : MonoBehaviour
     }
     public void AddScore(float amount)
     {
-        currentScore += amount;
+        _currentScore += amount;
 
-        if (currentScore > highScore)
+        if (_currentScore > _highScore)
         {
-            highScore = currentScore;
-            PlayerPrefs.SetFloat(SCORE_KEY, highScore);
+            _highScore = _currentScore;
+            PlayerPrefs.SetFloat(SCORE_KEY, _highScore);
             PlayerPrefs.Save();
             ApplyHighScore();
         }
@@ -51,21 +51,21 @@ public class ScoreManager : MonoBehaviour
     }
     public void AddKill()
     {
-        countKill++;
+        _countKill++;
 
         ApplyKill();
     }
     public void SetTotalKill(int enemySpawn)
     {
-        totalKill = enemySpawn;
+        _totalKill = enemySpawn;
         ApplyTotalKill();
     }
 
     public void ResetScore()
     {
-        currentScore = 0f;
-        countKill = 0;
-        totalKill = 0;
+        _currentScore = 0f;
+        _countKill = 0;
+        _totalKill = 0;
         ApplyScore();
         ApplyKill();
     }
@@ -73,14 +73,14 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = currentScore.ToString("F0");
+            scoreText.text = _currentScore.ToString("F0");
         }
     }
     private void ApplyKill()
     {
         if ( killText != null)
         {
-            killText.text = countKill.ToString();
+            killText.text = _countKill.ToString();
         }
         
     }
@@ -88,19 +88,19 @@ public class ScoreManager : MonoBehaviour
     {
         if (textHighScore != null)
         {
-            textHighScore.text = highScore.ToString("F0");
+            textHighScore.text = _highScore.ToString("F0");
         }
     }
     private void ApplyTotalKill()
     {
         if (killTotal != null)
         {
-            killTotal.text = totalKill.ToString();
+            killTotal.text = _totalKill.ToString();
         }
     }
     private void ClearHighScore()
     {
-        highScore = 0f;
+        _highScore = 0f;
         PlayerPrefs.DeleteKey(SCORE_KEY);
         PlayerPrefs.Save();
         ApplyHighScore();
