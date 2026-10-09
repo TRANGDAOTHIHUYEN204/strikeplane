@@ -15,6 +15,5 @@ UserSettings/EditorUserSettings.asset
 
 !Assets/ImportantFile.csproj
 .vs/
-
-
+.idea/
 UserSettings/
