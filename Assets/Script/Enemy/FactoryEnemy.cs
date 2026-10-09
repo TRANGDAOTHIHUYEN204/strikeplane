@@ -13,7 +13,7 @@ public class FactoryEnemy : IFactoryEntity<Enemy>
         if (_enemyPool.Count > 0)
         {
             enemy = _enemyPool.Pop();
-            enemy.transform.SetLocalPositionAndRotation(posSpawn, Quaternion.identity);
+            enemy.transform.SetPositionAndRotation(posSpawn, Quaternion.identity);
 
         }
         else

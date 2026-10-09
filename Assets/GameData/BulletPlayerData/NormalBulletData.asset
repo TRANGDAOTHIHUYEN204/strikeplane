@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e613a251a5925d4883626f395c0a1ba, type: 3}
   m_Name: NormalBulletData
   m_EditorClassIdentifier: Assembly-CSharp::BulletDataBase
-  _damage: 50
-  _bulletType: 0
+  damage: 50
+  bulletType: 0
   layerTarget:
     serializedVersion: 2
     m_Bits: 128
-  _lifeTime: 3.2
-  _speedMove: 2
-  _powerUpIcon: {fileID: 21300000, guid: fde575ea5128bc747b1fb00e6f385559, type: 3}
+  lifeTime: 3.2
+  speedMove: 2
+  powerUpIcon: {fileID: 7000217388263515111, guid: a977b532523bc09429069d7b1ade0dba,
+    type: 3}
+  addLine: 0

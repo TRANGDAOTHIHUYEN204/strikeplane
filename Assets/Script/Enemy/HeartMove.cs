@@ -1,19 +1,26 @@
 using UnityEngine;
 
-public class HeartMove : MoveBase
+public class HeartFormationMove : MoveBase
 {
-    private readonly float _scale;
+    private readonly Vector3 _target;
+    private readonly float _travelRatio;
 
-    public HeartMove(float scale = 0.15f) => _scale = scale;
+    public HeartFormationMove(Vector2 target, float travelRatio = 0.4f)
+    {
+        _target = new Vector3(target.x, target.y, 0f);
+        _travelRatio = Mathf.Clamp(travelRatio, 0.01f, 1f);
+    }
 
     protected override void Move(float progress)
     {
-        float angle = progress * Mathf.PI * 2f;
-
-        float s = Mathf.Sin(angle);
-        float x = 16f * s * s * s;
-        float y = 13f * Mathf.Cos(angle) - 5f * Mathf.Cos(2f * angle) - 2f * Mathf.Cos(3f * angle) - Mathf.Cos(4f * angle) - 5f;
-
-        _targetTransform.position = _startPosition + new Vector3(x, y, 0f) * _scale;
+        if (progress < _travelRatio)
+        {
+            float t = Mathf.SmoothStep(0f, 1f, progress / _travelRatio);
+            _targetTransform.position = Vector3.Lerp(_startPosition, _target, t);
+        }
+        else
+        {
+            _targetTransform.position = _target; 
+        }
     }
 }

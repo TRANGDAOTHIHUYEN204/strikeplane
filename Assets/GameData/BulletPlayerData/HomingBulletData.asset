@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e613a251a5925d4883626f395c0a1ba, type: 3}
   m_Name: HomingBulletData
   m_EditorClassIdentifier: Assembly-CSharp::BulletDataBase
-  _damage: 50
-  _bulletType: 3
+  damage: 50
+  bulletType: 3
   layerTarget:
     serializedVersion: 2
     m_Bits: 128
-  _lifeTime: 3.2
-  _speedMove: 2
-  _powerUpIcon: {fileID: 21300000, guid: 4597cc4489ac8ac4dbcca786dd7babd3, type: 3}
+  lifeTime: 3.2
+  speedMove: 2
+  powerUpIcon: {fileID: -2346302928887187388, guid: 603fde4b5fdac9348abf17a3077dd1df,
+    type: 3}
+  addLine: 0

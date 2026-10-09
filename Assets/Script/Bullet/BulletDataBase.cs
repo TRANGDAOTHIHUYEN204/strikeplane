@@ -12,11 +12,11 @@ public enum BulletType
 [CreateAssetMenu(fileName = "BulletData", menuName = "BulletBase", order = 3)]
 public class BulletDataBase : ScriptableObject
 {
-    [SerializeField] private int damage;
+    [SerializeField, Min(1)] private int damage;
     [SerializeField] private BulletType bulletType;
     [SerializeField] private LayerMask layerTarget;
     [SerializeField] private float lifeTime;
-    [SerializeField] private float speedMove;
+    [SerializeField, Min(0.1f)] private float speedMove;
     [SerializeField] private Sprite powerUpIcon;
     [SerializeField] private bool addLine;
     public int Damage
@@ -24,16 +24,8 @@ public class BulletDataBase : ScriptableObject
         get {  return damage; }
         private set { damage = Mathf.Max(1, value); }
     }
-    public BulletType TypeBullet
-    {
-        get { return bulletType; }
-        private set { bulletType = value; }
-    }
-    public LayerMask LayerTarget
-    {
-        get { return layerTarget;}
-        private set { layerTarget = value; }
-    }
+    public BulletType TypeBullet => bulletType;
+    public LayerMask LayerTarget =>  layerTarget;
     public float LifeTime => lifeTime;
     public float SpeedMove => speedMove;
     public Sprite PowerUpIcon => powerUpIcon;

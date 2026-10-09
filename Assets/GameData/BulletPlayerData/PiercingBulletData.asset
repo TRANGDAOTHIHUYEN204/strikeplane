@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e613a251a5925d4883626f395c0a1ba, type: 3}
   m_Name: PiercingBulletData
   m_EditorClassIdentifier: Assembly-CSharp::BulletDataBase
-  _damage: 50
-  _bulletType: 1
+  damage: 50
+  bulletType: 1
   layerTarget:
     serializedVersion: 2
     m_Bits: 128
-  _lifeTime: 3.2
-  _speedMove: 2
-  _powerUpIcon: {fileID: 21300000, guid: 99a711709045c58409b66e71ee2b3e1a, type: 3}
+  lifeTime: 3.2
+  speedMove: 2
+  powerUpIcon: {fileID: 21300000, guid: 299e1dc317988174ab4c466b78ba6791, type: 3}
+  addLine: 0
