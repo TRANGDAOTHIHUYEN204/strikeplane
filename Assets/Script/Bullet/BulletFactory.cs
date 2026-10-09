@@ -6,6 +6,7 @@ public class BulletFactory : MonoBehaviour
     [SerializeField] private Bullet bulletPrefab ;
     private Stack<Bullet> _bulletPool = new Stack<Bullet>();
     private List<Bullet> _bulletActive = new List<Bullet>();
+    [SerializeField] private ScreenBoudaries screenBoudaries;
     public Bullet CreateBullet(BulletDataBase bulletDatabase, Vector2 pos, Vector2 direction)
     {
         Bullet bullet;
@@ -18,7 +19,7 @@ public class BulletFactory : MonoBehaviour
         {
             bullet = Instantiate(bulletPrefab);
         }
-        bullet.Init(bulletDatabase,this, pos, direction);
+        bullet.Init(bulletDatabase,this, pos, direction, screenBoudaries);
         _bulletActive.Add(bullet);
         return bullet;
     }

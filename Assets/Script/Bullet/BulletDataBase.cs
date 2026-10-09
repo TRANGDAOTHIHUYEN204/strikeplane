@@ -7,6 +7,7 @@ public enum BulletType
     PiercingBullet,
     Explosive,
     HomingBullet,
+    RocketBullet,
 }
 
 [CreateAssetMenu(fileName = "BulletData", menuName = "BulletBase", order = 3)]

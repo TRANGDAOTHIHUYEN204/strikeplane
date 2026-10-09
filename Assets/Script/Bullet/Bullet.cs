@@ -11,14 +11,16 @@ public class Bullet : MonoBehaviour
     private BulletFactory _bulletFactory;
     public float timeLifeCycle;
     public LayerMask TargetLayer => _bulletDataBase.LayerTarget;
-
+    public BulletType BulletType => _bulletDataBase.TypeBullet;
     public bool HasAddLine => _bulletDataBase.AddLine;
-    public void Init(BulletDataBase bulletDataBase, BulletFactory bulletFactory, Vector2 pos, Vector2 direction)
+    private ScreenBoudaries  _screenBoudaries;
+    public void Init(BulletDataBase bulletDataBase, BulletFactory bulletFactory, Vector2 pos, Vector2 direction, ScreenBoudaries screenBoudaries)
     {
         _bulletFactory = bulletFactory;
         _bulletInteractWorld = new BulletInteractWorld();
         _infor = new BulletInformation();
         _bulletDataBase = bulletDataBase;
+        _screenBoudaries = screenBoudaries;
 
         _infor.bullet = this;
         _infor.currentPos = pos;
@@ -76,6 +78,8 @@ public class Bullet : MonoBehaviour
                 return new HomingBulletBehaviour(8f, 5f);
             case (BulletType.Explosive):
                 return new ExplosiveBulletBehaviour(1);
+            case (BulletType.RocketBullet):
+                return new RocketBulletBehaviour(5, _screenBoudaries.MaxX,  _screenBoudaries.MaxY );
             default:
                 return new NormalBulletBehaviour();
         }

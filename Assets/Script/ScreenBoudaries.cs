@@ -13,7 +13,7 @@ public class ScreenBoudaries : MonoBehaviour
     public float MinY { get; private set; }
     public float MaxY { get; private set; }
 
-    // Biên camera thật, không padding (dùng để despawn)
+
     public float ViewMinX { get; private set; }
     public float ViewMaxX { get; private set; }
     public float ViewMinY { get; private set; }

@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Khoảng cách ngoài camera để coi là đã rời màn hình
     private const float DespawnMargin = 1f;
-    // Thời gian sống tối đa nếu enemy không bao giờ vào được màn hình
     private const float MaxLifeTime = 30f;
 
     private Enemy _enemy;
@@ -21,8 +19,6 @@ public class EnemyMovement : MonoBehaviour
         _speed = speed;
         _screenBoudaries = screenBoudaries;
         _scriptedMove = null;
-
-        // Reset khi lấy lại từ pool
         _hasEnteredView = false;
         _lifeTimer = 0f;
     }
